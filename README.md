@@ -29,7 +29,7 @@ git push origin main
 3. Select `main` branch, `/ (root)` folder
 4. Click **Save**
 
-Your site will be live at: `https://[your-username].github.io/career-hub/`
+Your site will be live at: `https://BhurkeSiddhesh.github.io/career-hub/`
 
 (Takes ~2 minutes to deploy the first time)
 
