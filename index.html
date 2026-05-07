@@ -37,6 +37,7 @@
     <a class="nav-item" data-page="ip-mars-cost"> <span class="dot"></span>Cost Mgmt Tool (MARS)</a>
     <a class="nav-item" data-page="ip-mars-csl">  <span class="dot"></span>Customer Service Levels (MARS)</a>
     <a class="nav-item" data-page="ip-meta">      <span class="dot"></span>Meta Advice &amp; Patterns</a>
+    <a class="nav-item" data-page="ip-core-qa">   <span class="dot"></span>Core Analytics Q&amp;A</a>
   </div>
 
   <div class="nav-section">
@@ -111,21 +112,22 @@
      INTERVIEW PREP PAGES
 ═══════════════════════════════════════════════════════════════ -->
 
-<!-- PROJECT 1: Jewel-Osco -->
+<!-- PROJECT 1: Refund Processing Automation (Agentic AI Decisioning) -->
 <div id="ip-jewel" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 1 of 9</span>
-    <h1 class="page-title">Refund Processing Automation</h1>
-    <p class="page-subtitle">Agentic AI decisioning system for Jewel-Osco (Albertsons). Oct 2025 – Present.</p>
+    <h1 class="page-title">Refund Processing Automation (Agentic AI Decisioning)</h1>
+    <p class="page-subtitle">Agentic AI / Multi-agent system for Albertsons / Jewel-Osco, US. Oct 2025 – Present.</p>
     <div class="stat-row">
       <div class="stat-pill">Client <span class="val">Albertsons / Jewel-Osco, US</span></div>
-      <div class="stat-pill">Type <span class="val">Agentic AI · Multi-agent</span></div>
+      <div class="stat-pill">Type <span class="val">Agentic AI / Multi-agent system</span></div>
     </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">11.3%</span><div class="impact-label">Refund cost reduction</div></div>
-      <div class="impact-item"><span class="impact-val">28%</span><div class="impact-label">Productivity savings</div></div>
-      <div class="impact-item"><span class="impact-val">89.16%</span><div class="impact-label">Decision consistency</div></div>
-      <div class="impact-item"><span class="impact-val">94.30%</span><div class="impact-label">Primary-driver reliability</div></div>
+      <div class="impact-item"><span class="impact-val">~11.3%</span><div class="impact-label">refund cost reduction</div></div>
+      <div class="impact-item"><span class="impact-val">28%</span><div class="impact-label">productivity saving</div></div>
+      <div class="impact-item"><span class="impact-val">89.16%</span><div class="impact-label">decision consistency</div></div>
+      <div class="impact-item"><span class="impact-val">94.30%</span><div class="impact-label">primary-driver reliability</div></div>
+      
     </div>
   </div>
 
@@ -140,19 +142,19 @@
 
       <!-- PITCH -->
       <div class="section-pane" id="j-pitch">
-        <div class="opening-line">"I built a multi-agent AI decisioning system for a US grocery chain's refund operations. The problem wasn't just cost — it was that 10 reps were making 10 different decisions on the same case. I fixed that by building four AI agents that reason together and produce a consistent, explainable recommendation every time."</div>
-        <h4>The Actual Problem</h4>
-        <p>Jewel-Osco had customer service reps manually approving or denying refund requests. No framework, no audit trail. Reps were inconsistent — same household, different outcomes depending on the rep. The business couldn't scale it and couldn't defend decisions to leadership.</p>
-        <h4>Why I Started With Data, Not the Model</h4>
-        <p>Before building any agent, I spent weeks creating three separate datasets — household level, order level, and item level. The hypothesis: refund fraud risk lives in the <em>combination</em> of signals. A high-value customer ordering a known problem SKU in an unusual pattern is a different risk profile than either signal alone. I created 25+ KPIs across these three layers.</p>
-        <h4>The Percentile Trick — Key Engineering Insight</h4>
-        <p>Raw KPI values mean nothing to a reasoning model. A household spend of $3,400 over 6 months — is that high or low? I converted every KPI to a percentile score against the population. The model doesn't see "$3,400" — it sees "household spend = 94th percentile = top-tier customer in last 6 months." The model can now reason contextually.</p>
-        <h4>The Four-Agent Structure</h4>
-        <p>Three specialist agents each analyzed the refund request from one lens — <strong>EntityProfiler</strong> (who is this customer?), <strong>ContextAnalysis</strong> (what does this order look like?), <strong>RiskSignal</strong> (what is the risk profile of this SKU?). Each produced a structured risk summary. A fourth <strong>DecisionAgent</strong> synthesised all three into a final call with written rationale. We used GPT-o3 for the decision layer — a reasoning model, not a generation model.</p>
-        <h4>Human-in-the-Loop — Why It Was Essential</h4>
-        <p>Reps couldn't trust a system they couldn't interrogate. The agent recommendation was visible alongside reasoning. Override rate started at ~40% in week one and dropped to under 15% by week six.</p>
-        <h4>Results</h4>
-        <p>500 cases, 5 stores — 11.3% refund cost reduction, 28% productivity savings, 89.16% decision consistency, 94.30% primary-driver reliability.</p>
+        <p>Opening line (say this verbatim first):</p>
+<p>"I built a multi-agent AI decisioning system for a US grocery chain's refund operations. The problem wasn't just cost — it was that 10 reps were making 10 different decisions on the same case. I fixed that by building four AI agents that reason together and produce a consistent, explainable recommendation every time."</p>
+<h4>THE ACTUAL PROBLEM</h4>
+<p>Jewel-Osco (an Albertsons banner) had customer service reps manually approving or denying refund requests. No framework, no audit trail. Reps were inconsistent — same household, different outcomes depending on the rep handling the case. The business couldn't scale it and couldn't defend decisions to leadership.</p>
+<h4>WHY I STARTED WITH DATA, NOT THE MODEL</h4>
+<p>Before building any agent, I spent weeks creating three separate datasets — household level, order level, and item level. The hypothesis was that refund fraud risk lives in the combination of signals, not any single one. A high-value customer ordering a known problem SKU in an unusual pattern is a different risk profile than either signal alone. For instance, a household might be at the 95th percentile for spend, but suddenly ordering a high-fraud-risk item with an unusual velocity. This combinatorial risk is what heuristics miss. To capture this, I created 25+ KPIs across these three layers.</p>
+<h4>THE PERCENTILE TRICK — KEY ENGINEERING INSIGHT</h4>
+<p>Raw KPI values mean nothing to a reasoning model. A household spend of $3,400 over 6 months — is that high or low? I converted every KPI to a percentile score against the population. So the agent doesn't see "$3,400" — it sees "household spend = 94th percentile = top-tier customer in last 6 months." The model can now reason contextually: high-spend + legitimate SKU + standard order pattern = approve. New customer + high-value item + no order history = flag.</p>
+<h4>THE FOUR-AGENT STRUCTURE</h4>
+<p>Three specialist agents each analyzed the refund request from one lens — household agent (who is this customer?), order agent (what does this order look like?), item agent (what is the risk profile of this SKU?). Each produced a structured risk summary. A fourth decision agent read all three summaries and made the final call with written rationale. We used GPT-o3 specifically because we needed a reasoning model, not a generation model.</p>
+<h4>HUMAN-IN-THE-LOOP — WHY IT WAS ESSENTIAL</h4>
+<p>Reps couldn't trust a system they couldn't interrogate. The PoC was designed with agent recommendation visible alongside reasoning — 'approve, because: household is 94th percentile spend, order matches typical pattern, item has 2% fraud rate in this region.' The rep validated or overrode. Our priority was to defend cases where reps were rejecting and our agent was accepting the refund request, and vice versa—that's where we had leverage to prove the model's reasoning. By showing the agent's logic side-by-side, reps could see exactly why a decision was made. The override rate started at ~40% in week one, but as reps began trusting the explanations, it dropped to under 15% by week six.</p>
+<p>RESULTS: 500 cases, 5 stores — 11.3% refund cost reduction, 28% productivity savings, 89.16% decision consistency, 94.30% primary-driver reliability.</p>
       </div>
 
       <!-- STAR -->
@@ -168,28 +170,32 @@
       <!-- Q&A -->
       <div class="section-pane" id="j-qa">
         <div class="qa-item">
-          <div class="qa-q">Why not just use heuristics instead of building an agentic system?</div>
-          <div class="qa-a">Heuristics work when decision rules are static and knowable upfront. The refund problem has neither property. The risk signal isn't in any single feature — it's in the <strong>interaction</strong> between features. A rule like 'if household spend is high, approve' would approve a high-spend customer actively gaming the system. You'd need hundreds of combined rules to capture the interaction space, and the moment fraud patterns shift, every rule breaks. The agentic approach lets each specialist agent reason from its own context, and the decision agent reconciles them. We validated this on a holdout set with 3 novel fraud patterns not seen in training — heuristics would have missed all three, the agent system flagged two of them.</div>
+          <div class="qa-q">Q: Why o3 and why not something else?</div>
+          <div class="qa-a">We used GPT-o3 because this was fundamentally a reasoning problem, not a generation problem. We didn't need the model to write a fluent email; we needed it to synthesize three different risk summaries, weigh conflicting signals, and produce a logical, auditable decision. The explicit reasoning capabilities of o3 allowed it to adjudicate disagreements between the specialist agents much more reliably than standard instruction-tuned models.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What was your eval framework? How did you actually measure this?</div>
-          <div class="qa-a"><strong>Decision Consistency (89.16%):</strong> Duplicated 200 cases with slight surface variations. Ran both versions through the system, checked whether final decision and primary driver matched. 89.16% match rate. The 10.84% inconsistency was mostly on genuinely borderline cases.<br/><br/><strong>Primary-Driver Reliability (94.30%):</strong> Had 3 senior reps manually label the most important risk factor for 100 cases. The agent's stated primary driver matched 94.3% of the time.<br/><br/><strong>Cost Delta (11.3%):</strong> Simulated full 500-case set with agent decisions vs. historical rep decisions. Mapped both to known fraud outcomes from chargeback data.</div>
+          <div class="qa-q">Q: Why not just use heuristics instead of building an agentic system?</div>
+          <div class="qa-a">Heuristics work when decision rules are static and knowable upfront. The refund problem has neither property. The risk signal isn't in any single feature — it's in the interaction between features. A rule like 'if household spend is high, approve' would approve a high-spend customer actively gaming the system with a new fraud pattern. A rule like 'if SKU fraud rate is high, deny' would deny a genuine high-value customer returning a legitimately defective product. You'd need hundreds of combined rules to capture the interaction space, and the moment fraud patterns shift, every rule breaks and someone has to manually update them.<br/><br/>The agentic approach lets each specialist agent reason from its own context, and the decision agent reconciles them. When patterns shift, the reasoning model adapts without rule rewrites. We validated this on a holdout set with 3 novel fraud patterns not seen in training — heuristics would have missed all three, the agent system flagged two of them.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What challenges did you face?</div>
-          <div class="qa-a"><strong>Data linkage:</strong> Household, order, and item data lived in three separate systems with no shared unique key. Probabilistic customer matching — ~12% of cases had incomplete linkage, got flagged for mandatory human review.<br/><br/><strong>Percentile calibration drift:</strong> Percentiles on a static window go stale. Built rolling 90-day windows, refreshed weekly.<br/><br/><strong>Agent disagreement handling:</strong> Went through 11 prompt iterations before adjudication logic felt consistent.<br/><br/><strong>Rep resistance:</strong> Some reps felt the system evaluated their past decisions. Framed explicitly as a support tool, not a performance tool.</div>
+          <div class="qa-q">Q: What was your eval framework? How did you actually measure this?</div>
+          <div class="qa-a">Three distinct measurement layers.<br/><br/>DECISION CONSISTENCY (89.16%): We duplicated 200 cases with slight surface variations — same household data and risk signals, slightly rephrased customer messages. Ran both versions through the system and checked whether the final decision and primary driver matched. 89.16% match rate. The 10.84% inconsistency was mostly on genuinely borderline cases, which is expected and healthy.<br/><br/>PRIMARY-DRIVER RELIABILITY (94.30%): We had 3 senior reps manually label the most important risk factor for 100 cases. The agent system's stated primary driver matched the senior rep's label 94.3% of the time. This told us the system was reasoning on the right signals.<br/><br/>COST DELTA (11.3%): We simulated the full 500-case set with agent decisions vs. actual historical rep decisions. Mapped both to known fraud outcomes from chargeback data. The agent denied more true-positive fraud cases while maintaining approval rates for legitimate high-value customers.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">How would you have done this differently?</div>
-          <div class="qa-a"><strong>Structured output schemas:</strong> Each agent produced semi-structured text. I'd now force strict JSON — risk_score, top_3_signals, confidence_level, recommended_action. Cleaner inputs make the decision agent more reliable.<br/><br/><strong>Smaller fine-tuned decision agent:</strong> GPT-o3 was expensive at scale. With 500+ labeled decisions, I'd fine-tune a smaller model on the decision layer.<br/><br/><strong>Earlier co-design with reps:</strong> I built the KPI framework from data analysis without enough rep input. They identified two patterns I'd missed — 'same-item repeat return' and 'short-interval multi-SKU return.'</div>
+          <div class="qa-q">Q: What challenges did you face?</div>
+          <div class="qa-a">DATA LINKAGE: Household, order, and item data lived in three separate systems with no shared unique key. We did probabilistic customer matching — linking loyalty IDs to transaction records to CRM profiles. About 12% of cases had incomplete linkage; we built a fallback where those got flagged for mandatory human review.<br/><br/>PERCENTILE CALIBRATION DRIFT: Percentiles computed on a static historical window go stale. A 90th percentile spender in January is a different dollar amount in December due to holiday volume. I built rolling 90-day windows, refreshed weekly.<br/><br/>AGENT DISAGREEMENT HANDLING: When all three specialist agents gave conflicting risk assessments, the decision agent had to adjudicate. We went through 11 prompt iterations before the adjudication logic felt consistent.<br/><br/>REP RESISTANCE: Some reps felt the system was being used to evaluate their past decisions. We addressed this by framing it explicitly as a support tool, not a performance tool.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What was success for you in this project?</div>
-          <div class="qa-a">The 11.3% cost number is what goes on the slide — but that wasn't what told me the project had worked. The signal was the rep who was most skeptical at the start — 9 years at Jewel-Osco, openly dismissive in the first two sessions. In week five, she used the agent's reasoning to explain her own decision to a supervisor. She said 'the system flagged it as low risk because of household spend and order history, and I agreed with that reasoning.' The cost number is a consequence. The real achievement was making a system explainable enough that an experienced operator chose to own its reasoning as her own.</div>
+          <div class="qa-q">Q: How would you have done this differently?</div>
+          <div class="qa-a">STRUCTURED OUTPUT SCHEMAS: Each agent produced semi-structured text summaries. I'd now force each specialist agent to output strict JSON — risk_score (0-100), top_3_signals with percentile values, confidence_level, recommended_action. Cleaner inputs make the decision agent more reliable and outputs more auditable.<br/><br/>SMALLER FINE-TUNED DECISION AGENT: GPT-o3 was expensive at scale. The specialist agents need full reasoning capability, but the decision agent is doing a more bounded task — synthesize three structured summaries into a binary decision with rationale. With 500+ labeled decisions, I'd fine-tune a smaller model on the decision layer.<br/><br/>EARLIER CO-DESIGN WITH REPS: I built the KPI framework from data analysis without enough rep input upfront. When we showed reps the system, they immediately identified two patterns I'd missed — 'same-item repeat return' and 'short-interval multi-SKU return.' Earlier co-design would have caught these before model build.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What are the three specialist agents and what does each one do?</div>
-          <div class="qa-a"><strong>EntityProfiler:</strong> Household-level signals — total spend percentile, order count, days as customer, loyalty history. Answers "is this a trustworthy customer?"<br/><br/><strong>ContextAnalysis:</strong> This specific order — order value relative to their history, timing, pattern vs. typical behaviour. Answers "does this order look normal for this customer?"<br/><br/><strong>RiskSignal:</strong> The item being returned — historical fraud rate for the SKU or product category, return patterns. Answers "is this a high-risk item?"<br/><br/>The fourth <strong>DecisionAgent</strong> reads all three and makes the final call with written rationale. The separation makes reasoning auditable and easy to debug.</div>
+          <div class="qa-q">Q: What was success for you in this project?</div>
+          <div class="qa-a">The 11.3% cost number is what goes on the slide — but that wasn't what told me the project had worked.<br/><br/>The signal was the rep who was most skeptical at the start — she had been at Jewel-Osco for 9 years and was openly dismissive in the first two sessions. In week five, she used the agent's reasoning to explain her own decision to a supervisor who questioned her on a borderline approval. She said 'the system flagged it as low risk because of household spend and order history, and I agreed with that reasoning.' She had gone from resisting the tool to using it as professional backup.<br/><br/>The cost number is a consequence. The real achievement was making a system explainable enough that an experienced operator chose to own its reasoning as her own.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What are the three specialist agents and what does each one do?</div>
+          <div class="qa-a">The three agents each reason from a different data layer:<br/><br/>EntityProfiler looks at who the customer is — household-level signals like total spend percentile, order count, days as a customer, loyalty history. It answers "is this a trustworthy customer?" It doesn't see raw dollar amounts — it sees "94th percentile spender over 6 months," which gives the model contextual meaning rather than a raw number.<br/><br/>ContextAnalysis looks at this specific order — order value relative to their history, timing, pattern vs. typical behaviour. It answers "does this order look normal for this customer?"<br/><br/>RiskSignal looks at the item being returned — historical fraud rate for that SKU or product category, return patterns for that product. It answers "is this a high-risk item?"<br/><br/>The fourth DecisionAgent reads all three structured summaries and makes the final call with written rationale. The separation is intentional — it makes the reasoning auditable and easy to debug when agents disagree.</div>
         </div>
       </div>
 
@@ -197,27 +203,28 @@
       <div class="section-pane" id="j-notes">
         <div class="notes-area">
           <span class="notes-label">Personal notes — saves locally in your browser</span>
-          <textarea data-key="jewel" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+          <textarea data-key="ip-jewel" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PROJECT 2: Brenntag -->
+<!-- PROJECT 2: SKU Segmentation Engine (PoC) -->
 <div id="ip-brenntag" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 2 of 9</span>
-    <h1 class="page-title">SKU Segmentation Engine</h1>
-    <p class="page-subtitle">Automated monthly SKU segmentation for Brenntag (NL). Aug–Sep 2025.</p>
+    <h1 class="page-title">SKU Segmentation Engine (PoC)</h1>
+    <p class="page-subtitle">Unsupervised ML / Clustering for Brenntag, NL. Aug 2025 – Sep 2025.</p>
     <div class="stat-row">
       <div class="stat-pill">Client <span class="val">Brenntag, NL</span></div>
-      <div class="stat-pill">Type <span class="val">Unsupervised ML · Clustering</span></div>
+      <div class="stat-pill">Type <span class="val">Unsupervised ML / Clustering</span></div>
     </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">0.81</span><div class="impact-label">Cluster stability (ARI)</div></div>
-      <div class="impact-item"><span class="impact-val">88%</span><div class="impact-label">Planner validation agreement</div></div>
-      <div class="impact-item"><span class="impact-val">3 days</span><div class="impact-label">Manual work automated / month</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Automated monthly planning cycle</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Cluster stability (ARI 0.81)</div></div>
+      <div class="impact-item"><span class="impact-val">88%</span><div class="impact-label">planner validation agreement</div></div>
+      
     </div>
   </div>
 
@@ -229,65 +236,86 @@
         <div class="section-tab" data-pane="br-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="br-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="br-pitch">
-        <div class="opening-line">"I solved a problem that makes most segmentation projects fail in production — cluster instability across time. Brenntag needed monthly SKU segments that planners could act on repeatably. Standard clustering gives you different shapes every month. I built a rolling-profile approach that makes clusters stable enough to attach business playbooks to."</div>
-        <h4>The Real Problem (Not the One in the Brief)</h4>
-        <p>The stated ask was 'segment our SKUs.' The actual problem: they'd tried this before and it never stuck — clusters reshuffled every month because clustering was done on point-in-time data. A planner cannot build a playbook on a cluster that reshuffles every month.</p>
-        <h4>Why This Was Hard</h4>
-        <p>Chemical distribution SKUs have high demand variability — volumes spike for industrial procurement cycles, crash during plant shutdowns, recover. Monthly data is noisy. The naive fix (moving average smoothing) loses the trend signal you need to distinguish genuinely declining SKUs from cyclically slow ones.</p>
-        <h4>Rolling 12-Month Behavioral Profiles</h4>
-        <p>Instead of clustering on point-in-time KPIs, I computed each SKU's behavioral fingerprint across trailing 12 months: average monthly volume, coefficient of variation (demand stability), order frequency, margin contribution, and trend slope. These describe the SKU's <em>character</em>, not its state. Applied PCA to reduce multicollinearity, then K-means on the stable profile space.</p>
-        <h4>Why K=5</h4>
-        <p>Two reasons. The business already had five planning playbooks — fast mover, standard, slow mover, critical low-stock, discontinue review. I started from that constraint and validated with silhouette scores (0.61 vs 0.48 for K=4 and 0.57 for K=6).</p>
-        <h4>Operational Delivery</h4>
-        <p>Automated monthly pipeline — compute rolling KPIs on the 1st of each month, run PCA + K-means, map clusters to business actions via heuristic thresholds, export to AWS S3 + Power BI. Planners get their segment assignments every month without touching the model.</p>
+        <p>Opening line:</p>
+<p>"I solved a problem that makes most segmentation projects fail in production — cluster instability across time. Brenntag needed monthly SKU segments that planners could act on repeatably. Standard clustering gives you different shapes every month. I built a rolling-profile approach that makes clusters stable enough to attach business playbooks to."</p>
+<p>THE REAL PROBLEM (not the one in the brief)</p>
+<p>The stated ask was 'segment our SKUs.' The actual problem was that the business had tried this before and it never stuck — because whoever had done it before computed clusters on point-in-time data. Clustering on September data gives you five beautiful clusters in September. Run it again in October and you get five completely different clusters with different members. A planner cannot build a playbook on a cluster that reshuffles every month.</p>
+<h4>WHY THIS WAS HARD</h4>
+<p>Chemical distribution SKUs have high demand variability — volumes spike for industrial procurement cycles, crash during plant shutdowns, recover. Monthly data is noisy. The naive fix (moving average smoothing) loses the trend signal you need to distinguish genuinely declining SKUs from cyclically slow ones.</p>
+<h4>MY SOLUTION — ROLLING 12-MONTH BEHAVIORAL PROFILES</h4>
+<p>Instead of clustering on point-in-time KPIs, I computed each SKU's behavioral fingerprint across trailing 12 months: average monthly volume, coefficient of variation (demand stability), order frequency, margin contribution, and trend slope. These describe the SKU's character, not its state. A SKU that is highly variable, low-frequency, and declining has a consistent fingerprint even if its actual September volume bounces around. Applied PCA to reduce multicollinearity, then K-means on the stable profile space.</p>
+<h4>WHY K=5</h4>
+<p>Two reasons. The business already had five planning playbooks — fast mover, standard, slow mover, critical low-stock, discontinue review. I started from that constraint and validated with silhouette scores that five was also mathematically defensible (silhouette = 0.61 vs 0.48 for K=4 and 0.57 for K=6).</p>
+<h4>OPERATIONAL DELIVERY</h4>
+<p>Automated monthly pipeline — compute rolling KPIs on the 1st of each month, run PCA + K-means, map clusters to business actions via heuristic thresholds, export to AWS S3 and Power BI. Planners get their segment assignments every month without touching the model.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="br-star">
         <table class="star-table">
           <tr><td>Situation</td><td>Brenntag needed reliable monthly SKU segmentation across 4 EU plants — previous attempts failed because cluster membership reshuffled every month, making business playbooks impossible to attach.</td></tr>
           <tr><td>Task</td><td>Build a segmentation engine where clusters are stable enough month-over-month that planners can apply consistent actions to each segment.</td></tr>
           <tr><td>Action</td><td>Computed 12-month rolling behavioral profiles per SKU rather than point-in-time KPIs, applied PCA + K-means (K=5), mapped clusters to 5 business actions via heuristic thresholds, automated full pipeline to AWS S3 + Power BI.</td></tr>
-          <tr><td>Result</td><td>Automated monthly segmentation replacing 3 days of manual planner work. Cluster stability (ARI) of 0.81 month-over-month. 88% planner agreement on cluster assignments in validation.</td></tr>
+          <tr><td>Result</td><td>Automated monthly segmentation replacing 3 days of manual planner work. Cluster stability (Adjusted Rand Index) of 0.81 month-over-month. 88% planner agreement on cluster assignments in validation.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="br-qa">
         <div class="qa-item">
-          <div class="qa-q">Why not build a classification model with fixed thresholds and reuse it?</div>
-          <div class="qa-a">A classification model requires labeled training data — someone has to define 'high priority' for each plant's specific KPI distributions. Brenntag has ~2,000 plants globally. You'd need local planner input for 2,000 plants, ongoing label maintenance, and retraining whenever a plant's product mix changes. Clustering discovers natural groupings without requiring pre-labeled ground truth. The business action mapping is done once at the global level and interpreted locally. A valid hybrid: run clustering once to discover natural groupings, then train a lightweight classifier on those cluster labels to score new SKUs in real-time.</div>
+          <div class="qa-q">Q: Why did you not build basic heuristic based segmentation instead of modelling?</div>
+          <div class="qa-a">Basic heuristics like "if volume > X and frequency > Y then Fast Mover" break down across a diverse network of plants. A threshold that works for a high-throughput facility will misclassify everything at a smaller facility. Furthermore, heuristics struggle with trend detection and noise—they are brittle to the high demand variability in chemical distribution. By using unsupervised learning on 12-month behavioral profiles, the model discovers the natural structure of the data automatically, adapting to different plant contexts without needing manual rule recalibration.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">How could you have made the clusters more actionable?</div>
-          <div class="qa-a"><strong>Constrained clustering:</strong> K-means optimizes for within-cluster variance — it doesn't guarantee groups are maximally useful for business decisions. Add constraints: 'no cluster should have fewer than 50 SKUs', 'each cluster must have a distinct action implication.'<br/><br/><strong>Co-design upfront:</strong> The planners identified that 'order frequency' mattered more than I had weighted it — a SKU ordered once a year in large volume is operationally very different from one ordered weekly in small quantities, even if total annual volume is identical.<br/><br/><strong>Interpretability layer:</strong> Each cluster got a numeric label. I would add auto-naming — given each cluster's centroid profile, generate a plain-language descriptor: 'high-velocity, stable demand, premium margin.'</div>
+          <div class="qa-q">Q: Why not build a classification model with fixed thresholds per plant and reuse it across months?</div>
+          <div class="qa-a">A classification model would work if you can define upfront what 'high priority' means for every plant — and if that definition stays stable. For a single plant with experienced planners who understand their SKU universe, a threshold-based classifier is simpler and more interpretable.<br/><br/>The problem is scale and knowledge transfer. Brenntag has ~2,000 plants globally, not 4. A classification model requires labeled training data — which means someone has to define 'high priority' for each plant's specific KPI distributions. You'd need local planner input for 2,000 plants, ongoing label maintenance, and retraining whenever a plant's product mix changes. That is not scalable.<br/><br/>Clustering discovers natural groupings from data without requiring pre-labeled ground truth. The business action mapping is done once at the global level and interpreted locally. That said, a hybrid approach is valid: run clustering once to discover natural groupings, then train a lightweight classifier on those cluster labels to score new SKUs in real-time.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What is Adjusted Rand Index and why did you use it?</div>
-          <div class="qa-a">ARI measures how similar two clusterings are to each other. Score of 1.0 = cluster membership is identical between runs. Score of 0 = overlap no better than random. I used it to measure month-over-month cluster stability — did the same SKUs end up in the same segments in October as September? We achieved 0.81, meaning the vast majority stayed in the same cluster across consecutive months. This matters because Brenntag's previous segmentation failed in production — not because the clusters were mathematically wrong, but because they reshuffled every month. ARI gave us a single number to prove that problem was solved. We targeted above 0.75 and hit 0.81.</div>
+          <div class="qa-q">Q: How could you have made the clusters more actionable?</div>
+          <div class="qa-a">This is the honest gap in what I built. K-means optimizes for within-cluster variance — it finds compact, well-separated groups mathematically. It does not guarantee those groups are maximally useful for business decisions.<br/><br/>CONSTRAINED CLUSTERING: Add business constraints as penalties in the optimization. For example: 'no cluster should have fewer than 50 SKUs' (too small to build a playbook), 'each cluster must have a distinct action implication.' Libraries like k-means-constrained support minimum/maximum cluster size constraints.<br/><br/>CO-DESIGN UPFRONT: I built the KPI set from data analysis, then validated with planners after the fact. The planners identified that 'order frequency' mattered more than I had weighted it — a SKU ordered once a year in large volume is operationally very different from one ordered weekly in small quantities, even if total annual volume is identical.<br/><br/>INTERPRETABILITY LAYER: Each cluster got a numeric label. I would add an auto-naming layer — given each cluster's centroid profile, generate a plain-language descriptor: 'high-velocity, stable demand, premium margin' vs 'low-frequency, high-variability, declining trend.' Planners adopt segments faster when they have intuitive names.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How did you measure whether this actually worked?</div>
+          <div class="qa-a">This was a PoC so we did not have long-term inventory impact data. Here is what we actually measured:<br/><br/>CLUSTER STABILITY (primary metric): Adjusted Rand Index between Month N and Month N-1 cluster assignments. ARI = 1 is perfect stability, 0 is random. We targeted ARI > 0.75 and achieved 0.81 across the three-month test window. The 0.19 instability was concentrated in mid-tier SKUs near cluster boundaries — expected and acceptable.<br/><br/>PLANNER VALIDATION: Reviewed 50 cluster assignments with planning leads. Asked: 'Does this cluster assignment match your intuition for this SKU?' 88% agreement. The 12% disagreements were mostly SKUs undergoing a genuine behavioral transition where the 12-month rolling window was slow to reflect the change — pointing to a needed improvement: shorter rolling windows for trend-detection alongside longer windows for stability scoring.<br/><br/>PROCESS VALUE: Manual segmentation took 3 planner-days per month across the 4 plants. Automated pipeline ran overnight.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is Adjusted Rand Index and why did you use it?</div>
+          <div class="qa-a">ARI measures how similar two clusterings are to each other. A score of 1.0 means cluster membership is identical between the two runs. A score of 0 means the overlap is no better than random.<br/><br/>I used it specifically to measure month-over-month cluster stability — did the same SKUs end up in the same segments in October as they did in September? We achieved 0.81, meaning the vast majority of SKUs stayed in the same cluster across consecutive months.<br/><br/>This matters because Brenntag's previous segmentation attempts failed in production — not because the clusters were mathematically wrong, but because they reshuffled every month and planners couldn't build repeatable playbooks on moving targets. ARI gave us a single number to prove that problem was solved. We targeted above 0.75 as the minimum acceptable threshold and hit 0.81.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="br-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="brenntag" placeholder="Your reflections, interview notes, updates..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-brenntag" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PROJECT 3: Metro Brands -->
+<!-- PROJECT 3: Demand Forecasting & Reorder Point Analysis -->
 <div id="ip-metro" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 3 of 9</span>
-    <h1 class="page-title">Demand Forecasting &amp; Reorder Point Analysis</h1>
-    <p class="page-subtitle">Hybrid ML forecasting system for Metro Brands (IN). Nov 2024 – Jul 2025.</p>
+    <h1 class="page-title">Demand Forecasting & Reorder Point Analysis</h1>
+    <p class="page-subtitle">Time Series / Hybrid ML (Prophet + Gradient Boosting) for Metro Brands, IN. Nov 2024 – Jul 2025.</p>
     <div class="stat-row">
       <div class="stat-pill">Client <span class="val">Metro Brands, IN</span></div>
-      <div class="stat-pill">Type <span class="val">Time Series · Hybrid ML</span></div>
+      <div class="stat-pill">Type <span class="val">Time Series / Hybrid ML (Prophet + Gradient Boosting)</span></div>
     </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">15%</span><div class="impact-label">Forecast accuracy improvement</div></div>
-      <div class="impact-item"><span class="impact-val">&lt;20%</span><div class="impact-label">MAPE on top 200 SKUs</div></div>
-      <div class="impact-item"><span class="impact-val">12%</span><div class="impact-label">Stockout reduction</div></div>
-      <div class="impact-item"><span class="impact-val">8%</span><div class="impact-label">Dead stock reduction</div></div>
+      <div class="impact-item"><span class="impact-val">15%</span><div class="impact-label">forecast accuracy improvement</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Automated reorder for top 200 SKUs</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Stockout/overstock reduction</div></div>
+      
     </div>
   </div>
+
   <div class="project-card open">
     <div class="project-body">
       <div class="section-tab-bar">
@@ -296,58 +324,72 @@
         <div class="section-tab" data-pane="mb-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="mb-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="mb-pitch">
-        <div class="opening-line">"Fashion demand forecasting is one of the hardest forecasting problems because the signal you most need — trend — is exactly what breaks standard models. I built a hybrid system that combined Prophet's trend decomposition with Gradient Boosting's feature learning, and layered in SKU behavioral clusters to give the model 'this shoe is seasonal' as structured context."</div>
-        <h4>Why Fashion Is Hard</h4>
-        <p>Most forecasting literature is built on FMCG — stable products, long history, predictable seasonality. Fashion footwear has short product lifecycles (many SKUs live 1–2 seasons), trend-driven demand spikes that don't recur, and high cannibalization between new and old styles.</p>
-        <h4>The Cluster Input — Key Architectural Choice</h4>
-        <p>I ran a separate clustering exercise on demand <em>shape</em> patterns — not demand level. Found 6 shapes: monsoon peak, festive spike, steady-state formal, athleisure year-round, summer sandal, winter boot. Each SKU was assigned a cluster label based on its historical demand shape. This label went into the forecasting model as a categorical feature — telling the model 'this SKU follows the monsoon pattern' as structured input.</p>
-        <h4>The Prophet Hybrid</h4>
-        <p>Prophet is good at decomposing a time series into trend + seasonality + holiday effects. It's not a great direct forecasting model for erratic data. I ran Prophet on each SKU's historical data, extracted its forward-projected trend and seasonality components as input <em>features</em> to the Gradient Boosting model. GBM then learned which Prophet signals were reliable for which cluster types.</p>
-        <h4>M+2 Horizon and Phased Deployment</h4>
-        <p>We forecast the 3rd month from today (M+2). Top 200 SKUs (80%+ of revenue) hit MAPE under 20% — the operational threshold for automated reorder. We shipped those first. The remaining ~800 SKUs had higher error — rather than deploy bad forecasts, we kept those on planner judgment with the model output as a reference signal.</p>
+        <p>Opening line:</p>
+<p>"Fashion demand forecasting is one of the hardest forecasting problems because the signal you most need — trend — is exactly what breaks standard models. I built a hybrid system that combined Prophet's trend decomposition with Gradient Boosting's feature learning, and layered in SKU behavioral clusters to give the model 'this shoe is seasonal' as structured context rather than hoping it figures that out from raw data."</p>
+<h4>WHY FASHION IS HARD</h4>
+<p>Most forecasting literature is built on FMCG — stable products, long history, predictable seasonality. Fashion footwear has short product lifecycles (many SKUs live 1–2 seasons), trend-driven demand spikes that don't recur, and high cannibalization between new and old styles. You cannot extrapolate last year's sales of a boot that has been discontinued.</p>
+<h4>THE CLUSTER INPUT — KEY ARCHITECTURAL CHOICE</h4>
+<p>I ran a separate clustering exercise on demand shape patterns — not demand level, but demand shape. How does this SKU's sales curve look across a year? Found 6 shapes: monsoon peak, festive spike, steady-state formal, athleisure year-round, summer sandal, winter boot. Each SKU was assigned a cluster label based on its historical demand shape. This label went into the forecasting model as a categorical feature — telling the model 'this SKU follows the monsoon pattern' as structured input.</p>
+<h4>THE PROPHET HYBRID</h4>
+<p>Prophet is good at one specific thing — decomposing a time series into trend + seasonality + holiday effects. It is not a great direct forecasting model for erratic data. But its trend and seasonality decomposition components are genuinely useful signals. I ran Prophet on each SKU's historical data, extracted its forward-projected trend and seasonality components as input features to the Gradient Boosting model. GBM then learned which Prophet signals were reliable for which cluster types.</p>
+<h4>M+2 HORIZON AND PHASED DEPLOYMENT</h4>
+<p>We forecast the 3rd month from today (M+2). Top 200 SKUs (80%+ of revenue) hit MAPE under 20% — the operational threshold for automated reorder. We shipped those first. The remaining ~800 SKUs had higher error — rather than deploy bad forecasts, we kept those on planner judgment with the model output as a reference signal.</p>
+<h4>REORDER POINT CALCULATION</h4>
+<p>Reorder point = forecast demand over lead time + safety stock buffer. Safety stock was calculated from historical demand variability (standard deviation of weekly demand x z-score for desired service level). The model output directly fed this formula — closing the loop from forecast to action.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="mb-star">
         <table class="star-table">
           <tr><td>Situation</td><td>Metro Brands had 15%+ stockout rate on popular styles and overstock on slow movers — inaccurate demand forecasts across 320+ stores and 1,000 SKUs.</td></tr>
           <tr><td>Task</td><td>Build a demand forecast accurate enough to drive automated reorder point calculations for fashion footwear, where erratic trends break standard models.</td></tr>
-          <tr><td>Action</td><td>Created 6 demand-shape clusters as model features, used Prophet decomposition outputs as hybrid inputs to Gradient Boosting, forecast M+2 horizon, phased deployment starting with top 200 SKUs meeting MAPE &lt;20%.</td></tr>
-          <tr><td>Result</td><td>15% improvement in overall forecast accuracy. Top 200 SKUs at MAPE &lt;20% deployed to automated reorder. Client reported ~12% stockout reduction and ~8% dead stock reduction 8 weeks post-deployment.</td></tr>
+          <tr><td>Action</td><td>Created 6 demand-shape clusters as model features, used Prophet decomposition outputs as hybrid inputs to Gradient Boosting, forecast M+2 horizon, phased deployment starting with top 200 SKUs meeting MAPE <20%.</td></tr>
+          <tr><td>Result</td><td>15% improvement in overall forecast accuracy. Top 200 SKUs at MAPE <20% deployed to automated reorder. Client reported ~12% stockout reduction and ~8% dead stock reduction 8 weeks post-deployment.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="mb-qa">
         <div class="qa-item">
-          <div class="qa-q">What did you try for the remaining 800 SKUs and why didn't it work?</div>
-          <div class="qa-a"><strong>More features:</strong> Added price elasticity, promotional flags, store-region variables. Marginal improvement, ~1-2 MAPE points. The fundamental problem is data sparsity: many SKUs had 12-18 months of monthly data — 12-18 training observations. No feature engineering fixes that.<br/><br/><strong>Global model:</strong> A single GBM trained across all 1,000 SKUs with SKU cluster embeddings. Helped mid-tier SKUs (~3 MAPE points for ~200 SKUs) but barely moved the long tail.<br/><br/><strong>Intermittent demand models (Croston's):</strong> Mixed results. Helped for genuinely intermittent SKUs but not for erratic-but-not-zero patterns.<br/><br/><strong>Honest answer:</strong> For new fashion SKUs with limited history, the best approach is analogical reasoning — find historically similar SKUs at the same lifecycle stage and use their trajectory. I didn't have time to build that, and it's what I'd tackle first in a second phase.</div>
+          <div class="qa-q">Q: What did you actually try for the remaining 800 SKUs and why didn't it work?</div>
+          <div class="qa-a">I want to be direct here because this is a real limitation I could not overcome.<br/><br/>Thing 1: Added more features — price elasticity, promotional flags, store-region variables, nearby competitor pricing. Marginal improvement, roughly 1-2 MAPE points. The fundamental problem is data sparsity: many SKUs had 12-18 months of monthly data, which is 12-18 training observations. No feature engineering fixes that.<br/><br/>Thing 2: Global model — a single GBM trained across all 1,000 SKUs simultaneously, with SKU cluster embeddings as identifiers. The idea was to transfer learning from data-rich SKUs to data-poor ones. This helped mid-tier SKUs (MAPE dropped ~3 points for ~200 SKUs in the 300-500 rank band) but barely moved the long tail. The demand patterns for truly sparse SKUs were too idiosyncratic to learn from analogous SKUs.<br/><br/>Thing 3: Intermittent demand models — Croston's method, designed for SKUs with frequent zero-demand periods. Mixed results. Helped for genuinely intermittent SKUs but not for erratic-but-not-zero patterns.<br/><br/>Honest answer: for new fashion SKUs with limited history, the best approach is analogical reasoning — find historically similar SKUs at the same lifecycle stage and use their trajectory. I did not have time to build that, and it is what I would tackle first in a second phase.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">How did you define success for this project?</div>
-          <div class="qa-a"><strong>Model criterion:</strong> MAPE &lt;20% for top 200 SKUs — agreed upfront because below 20%, the expected cost of forecast-driven inventory errors was lower than manual planning hours. We hit this for 82% of the top 200 SKUs.<br/><br/><strong>Business criterion:</strong> ~12% reduction in stockout events and ~8% reduction in dead stock value. I want to be careful — there were other supply chain changes happening simultaneously.<br/><br/><strong>Emergent signal:</strong> The planning team started using the forecast error distribution to set safety stock buffers. High-uncertainty SKUs got larger buffers. They derived this themselves from model outputs — the best signal that a model has been genuinely integrated into decision-making.</div>
+          <div class="qa-q">Q: How did you define success for this project?</div>
+          <div class="qa-a">Two explicit success criteria agreed upfront, one emergent.<br/><br/>MODEL CRITERION: MAPE < 20% for top 200 SKUs. This threshold came from a conversation with the planning team — below 20% MAPE, the expected cost of forecast-driven inventory errors was lower than the cost of manual planning hours. Above it, human judgment was cheaper. We hit this for 82% of the top 200 SKUs.<br/><br/>BUSINESS CRITERION: Reduction in stockout and overstock events 8 weeks post-deployment. Client reported ~12% reduction in stockout events for forecast-driven SKUs and ~8% reduction in dead stock value. I want to be careful attributing all of this to the model — there were other supply chain changes happening simultaneously. But the direction was correct.<br/><br/>EMERGENT SIGNAL: The planning team started using the forecast error distribution — not just the point forecast — to set safety stock buffers. High-uncertainty SKUs got larger buffers. This was not in the original scope; they derived it themselves from model outputs. That kind of adoption beyond the designed use case is the best signal that a model has been genuinely integrated into decision-making.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="mb-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="metro" placeholder="Your reflections, interview notes, updates..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-metro" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PROJECT 4: P&G -->
+<!-- PROJECT 4: SND Simulation (Supply Network Design) -->
 <div id="ip-pg" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 4 of 9</span>
-    <h1 class="page-title">SND Simulation</h1>
-    <p class="page-subtitle">Supply Network Design — order consolidation simulation for P&amp;G Japan. Feb–Oct 2024.</p>
+    <h1 class="page-title">SND Simulation (Supply Network Design)</h1>
+    <p class="page-subtitle">Network Optimization / Simulation for P&G, Japan. Feb 2024 – Oct 2024.</p>
     <div class="stat-row">
-      <div class="stat-pill">Client <span class="val">P&amp;G, Japan</span></div>
-      <div class="stat-pill">Type <span class="val">Network Optimization · Simulation</span></div>
+      <div class="stat-pill">Client <span class="val">P&G, Japan</span></div>
+      <div class="stat-pill">Type <span class="val">Network Optimization / Simulation</span></div>
     </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">$1M</span><div class="impact-label">Savings opportunity identified</div></div>
-      <div class="impact-item"><span class="impact-val">8%</span><div class="impact-label">Pilot vs. model variance</div></div>
-      <div class="impact-item"><span class="impact-val">Top 10</span><div class="impact-label">Customers (70-80% of volume)</div></div>
+      <div class="impact-item"><span class="impact-val">$1M</span><div class="impact-label">cost savings opportunity identified across top 10 customers</div></div>
+      
     </div>
   </div>
+
   <div class="project-card open">
     <div class="project-body">
       <div class="section-tab-bar">
@@ -356,56 +398,79 @@
         <div class="section-tab" data-pane="pg-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="pg-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="pg-pitch">
-        <div class="opening-line">"I built a supply network simulation for P&G Japan that found $1M in logistics savings — not by changing routes or carriers, but by identifying that the company had a commercial lever it was not using: flexible delivery date windows in customer contracts that had never been systematically exploited for consolidation."</div>
-        <h4>The Problem Framing</h4>
-        <p>P&amp;G Japan was dispatching partial truckloads because orders were scheduled to rigid Required Delivery Dates. Some customer contracts had RDD flexibility — ±1 or 2 days — that the logistics team never used because there was no tool to identify which orders could be pulled forward without violating the customer commitment.</p>
-        <h4>How the Simulation Worked</h4>
-        <p><strong>Layer 1 — Flexibility Filter:</strong> Parse every open future order against its contract RDD tolerance. Only orders with documented RDD flexibility were included. This conservative filter excluded ~60% of order volume but made the output defensible to procurement and commercial teams.<br/><br/><strong>Layer 2 — Consolidation Engine:</strong> For each consolidation-eligible order, model whether pulling it to today's shipment would bring the truck above 85% fill rate (threshold for full-truck economics).<br/><br/><strong>Layer 3 — Cost Model:</strong> Calculate the unit cost delta between consolidated and unconsolidated dispatch, multiplied by order volume, summed by customer.</p>
-        <h4>Operational Output</h4>
-        <p>The simulation ran daily. Each morning, planners saw a ranked list: 'these 8 orders should be held until tomorrow's dispatch to form a full truck for Customer X, saving ¥XXX per order.' It was a decision tool, not a reporting tool.</p>
+        <p>Opening line:</p>
+<p>"I built a supply network simulation for P&G Japan that found $1M in logistics savings — not by changing routes or carriers, but by identifying that the company had a commercial lever it was not using: flexible delivery date windows in customer contracts that had never been systematically exploited for consolidation."</p>
+<h4>THE PROBLEM FRAMING</h4>
+<p>P&G Japan was dispatching partial truckloads because orders were scheduled to rigid Required Delivery Dates. The insight was that some customer contracts had RDD flexibility — plus or minus 1 or 2 days — that the logistics team never used because there was no tool to identify which orders could be pulled forward without violating the customer commitment.</p>
+<h4>HOW THE SIMULATION WORKED</h4>
+<p>Three components. First, a flexibility filter — parse every open future order against its contract RDD tolerance to identify consolidation candidates. Only orders with documented RDD flexibility were included. This conservative filter excluded ~60% of order volume but made the output defensible to procurement and commercial teams. Second, a consolidation engine — for each consolidation-eligible order, model whether pulling it to today's shipment would bring the truck above 85% fill rate (threshold for full-truck economics). Third, a cost model — calculate the unit cost delta between consolidated and unconsolidated dispatch, multiplied by order volume, summed by customer.</p>
+<h4>WHY TOP 10 CUSTOMERS = $1M</h4>
+<p>In B2B logistics, the Pareto principle is extreme — top 10 customers typically represent 70-80% of volume. In P&G Japan's case, these customers also had the most flexible RDD contracts (negotiated over long commercial relationships). The $1M was heavily concentrated in 3 of the top 10 customers where contract flexibility was highest and current fill rates were lowest.</p>
+<h4>OPERATIONAL OUTPUT</h4>
+<p>The simulation ran daily. Each morning, planners saw a ranked list: 'these 8 orders should be held until tomorrow's dispatch to form a full truck for Customer X, saving ¥XXX per order.' It was a decision tool, not a reporting tool.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="pg-star">
         <table class="star-table">
-          <tr><td>Situation</td><td>P&amp;G Japan was dispatching partial truckloads on fixed RDD schedules — leaving truck capacity underutilized because no system identified when consolidation was contractually possible.</td></tr>
+          <tr><td>Situation</td><td>P&G Japan was dispatching partial truckloads on fixed RDD schedules — leaving truck capacity underutilized because no system identified when consolidation was contractually possible.</td></tr>
           <tr><td>Task</td><td>Build a simulation that identifies order consolidation opportunities using RDD flexibility windows, quantifies savings per customer, and gives planners daily actionable recommendations.</td></tr>
-          <tr><td>Action</td><td>Built a three-layer simulation: RDD flexibility filter from contract data, consolidation engine modeling fill-rate impact, cost model calculating savings per consolidation action. Output as daily planner decision tool.</td></tr>
+          <tr><td>Action</td><td>Built a three-layer simulation: RDD flexibility filter from contract data, consolidation engine modeling fill-rate impact of pulling orders forward, cost model calculating savings per consolidation action. Output as daily planner decision tool.</td></tr>
           <tr><td>Result</td><td>$1M savings opportunity identified across top 10 customers. Piloted with highest-opportunity customer — actual savings matched model prediction within 8% variance over 4-week pilot.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="pg-qa">
         <div class="qa-item">
-          <div class="qa-q">How did you actually model the truck fill calculation?</div>
-          <div class="qa-a">Truck capacity is multi-dimensional — weight, volume, and for some P&G categories, hazmat classification compatibility. We simplified to weight-based fill for the initial model, which was the binding constraint for ~70% of routes. Volume constraints were relevant for bulkier SKUs (detergent, fabric care) but we flagged those for manual review. The 85% fill threshold came from P&G's own carrier contracts — a rate break at 85% fill. Below that, spot rates apply. Above it, contracted rates apply. The $1M calculation was based on the contracted vs. spot rate differential multiplied by the consolidatable order volume.</div>
+          <div class="qa-q">Q: How did you actually model the truck fill calculation — what were the constraints?</div>
+          <div class="qa-a">Truck capacity is multi-dimensional — weight, volume, and for some P&G categories, hazmat classification compatibility. We simplified to weight-based fill for the initial model, which was the binding constraint for ~70% of routes. Volume constraints were relevant for bulkier SKUs (detergent, fabric care) but we flagged those for manual review rather than auto-including them in the consolidation recommendation.<br/><br/>The 85% fill threshold was not arbitrary — it came from P&G's own carrier contracts, which had a rate break at 85% fill. Below that, spot rates apply. Above it, contracted rates apply. The $1M calculation was based on the contracted vs. spot rate differential multiplied by the consolidatable order volume.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">How did you validate the $1M figure was not just theoretical?</div>
-          <div class="qa-a">Three validation steps: (1) Ran the model on 3 months of historical order data where actual dispatch outcomes were known — correctly identified consolidation opportunities that planners had manually executed in 76% of cases. (2) The $1M was conservative — we only included orders with documented RDD flexibility (40% of order volume). The real opportunity is probably 1.5-2x larger. (3) Piloted with one customer for 4 weeks — actual savings matched model prediction within 8% variance.</div>
+          <div class="qa-q">Q: How did you validate the $1M figure was not just theoretical?</div>
+          <div class="qa-a">Three validation steps.<br/><br/>First, we ran the model on 3 months of historical order data where actual dispatch outcomes were known — the model correctly identified consolidation opportunities that planners had manually executed in 76% of cases. The 24% miss rate was mostly due to late-breaking order changes that the model would not have seen at the daily run time.<br/><br/>Second, the $1M was conservative — we only included orders with documented RDD flexibility, which was 40% of order volume. The real opportunity is probably 1.5-2x larger, but unverified flexibility creates commercial risk.<br/><br/>Third, we piloted with one customer for 4 weeks. Actual savings matched the model's prediction within 8% variance — primarily because one large order in week 3 had an unusual weight profile the model had slightly miscalculated.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What were the data challenges?</div>
-          <div class="qa-a">The RDD flexibility data was the hardest part. It lived in customer contract documents — PDFs and Excel attachments in an email archive, not in the order management system. I had to work with the commercial team to extract flexibility windows and build a reference table. This took 3 weeks. Second challenge: order amendment rate of ~18% within the 48-hour window before dispatch. The model re-ran twice daily. In production, this would need a webhook-triggered recalculation whenever an order amendment came in.</div>
+          <div class="qa-q">Q: What were the data challenges in this project?</div>
+          <div class="qa-a">The RDD flexibility data was the hardest part. It lived in customer contract documents — PDFs and Excel attachments in an email archive, not in the order management system. I had to work with the commercial team to extract flexibility windows for each customer account and build a reference table. This took 3 weeks and was the project's longest single task.<br/><br/>The second challenge was order change frequency. P&G Japan had an order amendment rate of about 18% within the 48-hour window before dispatch. An order that is a consolidation candidate at 8am might have its quantity or timing amended by 3pm. The model re-ran twice daily to account for this. In production, this would need a webhook-triggered recalculation whenever an order amendment came in.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Walk me through the three layers of the simulation in detail.</div>
+          <div class="qa-a">Layer 1 —<br/><br/>RDD Flexibility Filter<br/><br/>: RDD means Required Delivery Date. Some P&G customer contracts allowed delivery 1-2 days early or late. This layer parsed every open future order against its contract terms and flagged only the ones with documented flexibility. About 60% of order volume was excluded here — those orders were locked to a specific date and couldn't be touched. This conservative filter made the output commercially defensible.<br/><br/>Layer 2 —<br/><br/>Fill-Rate Engine<br/><br/>: For each flexible order, the engine asked: if we pull this order forward to today's truck, does that truck now hit 85% capacity? The 85% threshold wasn't arbitrary — it came from P&G's own carrier contracts, which had a rate break at that fill level. Below 85%, spot rates apply. Above it, contracted rates apply. So the engine was specifically modeling whether consolidation would trigger a cost-tier change.<br/><br/>Layer 3 —<br/><br/>Cost Model<br/><br/>: For every consolidation the engine approved, it calculated the actual yen saving — the delta between spot and contracted rate, multiplied by order weight, multiplied by dispatch frequency. Summed across all consolidatable orders for the top 10 customers, this produced the $1M figure. The $1M was conservative because it only included the 40% of orders with verified RDD flexibility.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="pg-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="pg" placeholder="Your reflections, interview notes, updates..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-pg" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PROJECTS 5-9: Condensed but complete -->
+<!-- PROJECT 5: Last Mile Delivery Optimization -->
 <div id="ip-schneider" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 5 of 9</span>
     <h1 class="page-title">Last Mile Delivery Optimization</h1>
-    <p class="page-subtitle">Shipment consolidation system for Schneider Electric NAM. Sep 2023 – Jan 2024.</p>
-    <div class="stat-row"><div class="stat-pill">Client <span class="val">Schneider Electric, IN</span></div><div class="stat-pill">Type <span class="val">Logistics Analytics · Consolidation</span></div></div>
+    <p class="page-subtitle">Logistics Analytics / Consolidation Optimization for Schneider Electric, IN. Sep 2023 – Jan 2024.</p>
+    <div class="stat-row">
+      <div class="stat-pill">Client <span class="val">Schneider Electric, IN</span></div>
+      <div class="stat-pill">Type <span class="val">Logistics Analytics / Consolidation Optimization</span></div>
+    </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">30%</span><div class="impact-label">Shipments reclassified as non-urgent</div></div>
-      <div class="impact-item"><span class="impact-val">3-tier</span><div class="impact-label">Daily / weekly / bi-weekly windows</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Unlocked 30% of shipments misclassified as urgent</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Multi-interval consolidation system deployed</div></div>
+      
     </div>
   </div>
+
   <div class="project-card open">
     <div class="project-body">
       <div class="section-tab-bar">
@@ -414,52 +479,75 @@
         <div class="section-tab" data-pane="se-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="se-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="se-pitch">
-        <div class="opening-line">"I built a shipment consolidation recommendation system for Schneider Electric's North American logistics. The core insight was that the biggest savings opportunity was not in route optimization or carrier negotiation — it was in the data itself. Reason codes were labeling non-urgent shipments as urgent, hiding a large consolidation pool that nobody could see."</div>
-        <h4>The Actual Problem</h4>
-        <p>Schneider was running too many partial or singleton shipments in NAM. The logistics team knew costs were high but couldn't identify which shipments were genuinely time-critical vs. which ones had been labeled urgent out of habit or to avoid the consolidation queue.</p>
-        <h4>Reason Code Analysis — Where the Real Work Was</h4>
-        <p>Mapped all shipment reason codes into three categories: <strong>hard constraints</strong> (truly non-consolidatable), <strong>soft constraints</strong> (planner preference, habit-based), and <strong>consolidatable</strong>. Then linked reason codes back to actual delivery outcomes. An 'urgent delivery' code that resulted in a shipment arriving 3 days after the standard lead time is a de facto soft constraint. About 30% of 'urgent' tagged shipments had no evidence of urgency in delivery records.</p>
-        <h4>Multi-Interval Design</h4>
-        <p>Segmented customers by shipment frequency and volume, then modeled the minimum holding period to reach 85% truck fill for each segment. High-volume customers got daily consolidation windows. Mid-volume got weekly. Low-volume got bi-weekly.</p>
+        <p>Opening line:</p>
+<p>"I built a shipment consolidation recommendation system for Schneider Electric's North American logistics. The core insight was that the biggest savings opportunity was not in route optimization or carrier negotiation — it was in the data itself. Reason codes were labeling non-urgent shipments as urgent, hiding a large consolidation pool that nobody could see."</p>
+<h4>THE ACTUAL PROBLEM</h4>
+<p>Schneider was running too many partial or singleton shipments in NAM. The logistics team knew costs were high but could not identify which shipments were genuinely time-critical vs. which ones had been labeled urgent out of habit or to avoid the consolidation queue.</p>
+<h4>REASON CODE ANALYSIS — WHERE THE REAL WORK WAS</h4>
+<p>I mapped all shipment reason codes into three categories: hard constraints (truly non-consolidatable — customer emergency, contractual same-day), soft constraints (planner preference, habit-based), and consolidatable (standard replenishment, returns, routine orders). Then I linked reason codes back to actual delivery outcomes. An 'urgent delivery' code that resulted in a shipment arriving 3 days after the standard lead time is a de facto soft constraint, not a hard one. About 30% of 'urgent' tagged shipments had no evidence of urgency in delivery records — they just always got that code because no one questioned it.</p>
+<h4>MULTI-INTERVAL DESIGN</h4>
+<p>Not every customer benefits from the same consolidation window. I segmented customers by shipment frequency and volume, then modeled the minimum holding period to reach 85% truck fill for each segment. High-volume customers got daily consolidation windows. Mid-volume got weekly. Low-volume got bi-weekly.</p>
+<h4>THE OUTPUT</h4>
+<p>A daily recommendation table — for each consolidatable shipment, which consolidation window it belongs to, which other shipments it can be held with, and the projected savings from consolidation vs. dispatching now. Planners could see the cost of their impatience in real time.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="se-star">
         <table class="star-table">
-          <tr><td>Situation</td><td>Schneider's NAM logistics had high per-shipment costs from frequent partial loads — reason code inflation was masking a large consolidation opportunity that planners couldn't see.</td></tr>
+          <tr><td>Situation</td><td>Schneider's NAM logistics had high per-shipment costs from frequent partial loads — reason code inflation was masking a large consolidation opportunity that planners could not see.</td></tr>
           <tr><td>Task</td><td>Identify which shipments were genuinely non-consolidatable vs. soft-constrained, and build a recommendation system for optimal consolidation windows per customer.</td></tr>
-          <tr><td>Action</td><td>Categorized reason codes into hard/soft/consolidatable via delivery outcome linkage. Segmented customers by volume/frequency. Built multi-interval consolidation recommendation engine with per-shipment savings calculation.</td></tr>
+          <tr><td>Action</td><td>Categorized reason codes into hard/soft/consolidatable via delivery outcome linkage. Segmented customers by volume/frequency. Built multi-interval (daily/weekly/bi-weekly) consolidation recommendation engine with per-shipment savings calculation.</td></tr>
           <tr><td>Result</td><td>Identified 30% of 'urgent' shipments as soft-constraint, unlocking a significant consolidation pool. System gave planners real-time cost signal on dispatch decisions across NAM market.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="se-qa">
         <div class="qa-item">
-          <div class="qa-q">How did you determine which reason codes were genuinely urgent vs. soft constraints?</div>
-          <div class="qa-a">Two-step process. First, definitional mapping — worked with operations managers to categorize reason codes by business intent. Second, outcome validation — for ambiguous codes, linked each shipment to its actual delivery record and checked whether the shipment actually needed to arrive on the day it was dispatched. Test: did the customer use the product within 24 hours, and was there a documented exception reason in the CRM? Shipments where delivery arrived on the standard window date with no exceptional reason were reclassified as soft constraints. 30% reclassification rate was conservative enough that the business accepted it as a reasonable lower bound.</div>
+          <div class="qa-q">Q: How did you determine which reason codes were genuinely urgent vs. soft constraints?</div>
+          <div class="qa-a">Two-step process. First, definitional mapping — I worked with operations managers to categorize reason codes by business intent. Some were unambiguous: 'customer contract emergency' = hard constraint, 'standard replenishment' = consolidatable. The ambiguous bucket was codes like 'customer request' and 'planner override.'<br/><br/>Second, outcome validation — for the ambiguous codes, I linked each shipment to its actual delivery record and checked whether the shipment actually needed to arrive on the day it was dispatched. The test: did the customer use the product within 24 hours of delivery, and was there a documented exception reason in the CRM? Shipments where delivery arrived on the standard window date, with no exceptional reason in CRM, were reclassified as soft constraints regardless of the code used to dispatch them.<br/><br/>This was not a perfect classification — some soft-constraint shipments might have had genuine urgency not documented. But 30% reclassification rate was conservative enough that the business accepted it as a reasonable lower bound.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What was the hardest data problem?</div>
-          <div class="qa-a">Cross-system record linkage. The shipment management system, CRM, and delivery tracking system did not share a common customer identifier. Linking a shipment's reason code to its delivery outcome to its CRM exception record required fuzzy matching on customer name and delivery address — no clean join key existed. About 15% of records couldn't be reliably linked and were excluded. I flagged this — if Schneider standardized their customer identifiers across systems, analysis coverage would improve significantly.</div>
+          <div class="qa-q">Q: How did you pick daily vs. weekly vs. bi-weekly for each customer?</div>
+          <div class="qa-a">Volume-based fill rate modeling. For each customer, I looked at their trailing 90-day average daily shipment weight. The question was: at what holding interval does the expected accumulated weight reliably exceed 85% of a truck's rated capacity?<br/><br/>For a customer dispatching 20 tonnes per day: daily consolidation gets a full truck every day. For a customer dispatching 2 tonnes per day: you need to hold 8-10 days to fill a truck — weekly is right. For a customer at 0.5 tonnes per day: bi-weekly.<br/><br/>I added a variability buffer. For customers with high day-to-day shipment variability (coefficient of variation > 0.5), I extended the consolidation window one tier. High variability means you cannot reliably predict fill — better to hold longer and guarantee a full truck than to dispatch partial loads because a high-volume day was followed by a low-volume day.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What was the hardest data problem in this project?</div>
+          <div class="qa-a">Cross-system record linkage. The shipment management system, the CRM, and the delivery tracking system did not share a common customer identifier. The shipment system used customer codes, the CRM used account IDs, and delivery tracking used a mix of both plus address-based identifiers.<br/><br/>Linking a shipment's reason code (shipment system) to its delivery outcome (delivery tracking) to its CRM exception record required fuzzy matching on customer name and delivery address — no clean join key existed. About 15% of records could not be reliably linked and were excluded from the reason code reclassification analysis. This is a known data quality gap I flagged — if Schneider standardized their customer identifiers across systems, the analysis coverage would improve significantly.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="se-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="schneider" placeholder="Your reflections..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-schneider" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- PROJECT 6: Strategy & Analytics (SEO) -->
 <div id="ip-google" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 6 of 9</span>
-    <h1 class="page-title">Strategy &amp; Analytics (SEO)</h1>
-    <p class="page-subtitle">Growth analytics and attribution modeling for Google EMEA. Feb 2022 – Aug 2023.</p>
-    <div class="stat-row"><div class="stat-pill">Client <span class="val">Google, UK</span></div><div class="stat-pill">Type <span class="val">Growth Analytics · Attribution</span></div></div>
+    <h1 class="page-title">Strategy & Analytics (SEO)</h1>
+    <p class="page-subtitle">Growth Analytics / Attribution Modeling for Google, UK. Feb 2022 – Aug 2023.</p>
+    <div class="stat-row">
+      <div class="stat-pill">Client <span class="val">Google, UK</span></div>
+      <div class="stat-pill">Type <span class="val">Growth Analytics / Attribution Modeling</span></div>
+    </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">21%</span><div class="impact-label">Q/Q active user growth (EMEA)</div></div>
-      <div class="impact-item"><span class="impact-val">±12%</span><div class="impact-label">OKR prediction accuracy (from ±30%)</div></div>
-      <div class="impact-item"><span class="impact-val">40%</span><div class="impact-label">Journeys driven by discovery content (unrecognized)</div></div>
+      <div class="impact-item"><span class="impact-val">21%</span><div class="impact-label">Q/Q active user growth across EMEA</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Attribution model improved OKR prediction accuracy from ±30% to ±12%</div></div>
+      
     </div>
   </div>
+
   <div class="project-card open">
     <div class="project-body">
       <div class="section-tab-bar">
@@ -468,15 +556,22 @@
         <div class="section-tab" data-pane="g-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="g-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="g-pitch">
-        <div class="opening-line">"I was embedded with Google's EMEA analytics team to build the measurement infrastructure that drove 21% quarter-over-quarter active user growth across markets. The core problem was not data — it was that the existing global dashboard averaged out market-specific dynamics, making it impossible to know what was actually working where."</div>
-        <h4>What the Problem Actually Was</h4>
-        <p>Google had a unified EMEA dashboard showing aggregate SEO metrics. Germany looked fine. Middle East looked fine. But averaging them masked the fact that Germany's user growth had stalled for two quarters while Middle East was growing faster than anyone realized. And no one knew which SEO interventions were causing what — because the attribution model was last-touch, which significantly undervalued early-journey content discovery pages.</p>
-        <h4>Market-Specific KPI Frameworks</h4>
-        <p>Built individual KPI sets for each major EMEA market. The methodology was correlation analysis — for each market, which leading SEO indicators had the highest 4-week leading correlation with active user growth? These varied substantially. In mobile-first markets, crawl efficiency and page speed were the strongest predictors. In desktop-heavy markets, content depth metrics and SERP feature coverage mattered more.</p>
-        <h4>Attribution Model Rebuild — Markov Chain</h4>
-        <p>Replaced last-touch attribution with a data-driven multi-touch model using Markov chain attribution. Mapped user acquisition journeys and calculated each touchpoint's <em>removal effect</em> (what % of conversions would be lost if this touchpoint did not exist?). Revealed that discovery-phase content pages, which got zero credit under last-touch, were critical in 40% of acquisition journeys.</p>
+        <p>Opening line:</p>
+<p>"I was embedded with Google's EMEA analytics team to build the measurement infrastructure that drove 21% quarter-over-quarter active user growth across markets. The core problem was not data — it was that the existing global dashboard averaged out market-specific dynamics, making it impossible to know what was actually working where."</p>
+<h4>WHAT THE PROBLEM ACTUALLY WAS</h4>
+<p>Google had a unified EMEA dashboard showing aggregate SEO metrics. Germany looked fine. Middle East looked fine. But averaging them masked the fact that Germany's user growth had stalled for two quarters while Middle East was growing faster than anyone realized. And no one knew which SEO interventions were causing what — because the attribution model was last-touch, which significantly undervalued early-journey content discovery pages.</p>
+<h4>MARKET-SPECIFIC KPI FRAMEWORKS</h4>
+<p>I built individual KPI sets for each major EMEA market. The methodology was correlation analysis — for each market, which leading SEO indicators had the highest 4-week leading correlation with active user growth? These varied substantially. In mobile-first markets, crawl efficiency and page speed were the strongest predictors. In desktop-heavy markets, content depth metrics and SERP feature coverage mattered more.</p>
+<h4>ATTRIBUTION MODEL REBUILD</h4>
+<p>Replaced last-touch attribution with a data-driven multi-touch model using Markov chain attribution. I mapped user acquisition journeys — the sequence of SEO touchpoints before a user became active — and calculated each touchpoint's removal effect (what % of conversions would be lost if this touchpoint did not exist?). This revealed that discovery-phase content pages, which got zero credit under last-touch, were critical in 40% of acquisition journeys. Resource allocation shifted meaningfully toward those pages.</p>
+<h4>OKR EVALUATION FRAMEWORK</h4>
+<p>Built a quarterly OKR impact framework — each initiative got a projected contribution range to active user growth, measured at quarter-end against actual outcomes. Over 6 quarters, OKR prediction accuracy improved from ±30% to ±12% — meaning the team got significantly better at forecasting what would work.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="g-star">
         <table class="star-table">
           <tr><td>Situation</td><td>Google EMEA had a global SEO dashboard that averaged out market-specific dynamics — misallocating resources and undervaluing organic channel contribution due to flawed last-touch attribution.</td></tr>
@@ -485,36 +580,51 @@
           <tr><td>Result</td><td>21% Q/Q active user growth across EMEA. Attribution shift revealed discovery content driving 40% of journeys unrecognized. OKR prediction accuracy improved from ±30% to ±12% over 6 quarters.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="g-qa">
         <div class="qa-item">
-          <div class="qa-q">How does Markov chain attribution actually work?</div>
-          <div class="qa-a">Model each user's journey from first SEO touch to becoming active as a sequence of states (touchpoints). Use historical journey data to estimate transition probabilities between states. Then, for each touchpoint, calculate the <strong>removal effect</strong>: if you delete all journeys containing this touchpoint and re-run the model, what % of conversions disappear? A touchpoint with a 35% removal effect is responsible for 35% of conversions. Sum removal effects, normalize to 100% = attribution weights. Why this over simpler models? Linear attribution says every touch is equal. Time-decay says recent touches matter more. These are arbitrary assumptions. Markov chain derives attribution from actual observed journey patterns — it's empirical, not assumed.</div>
+          <div class="qa-q">Q: How does Markov chain attribution actually work?</div>
+          <div class="qa-a">The core idea: model each user's journey from first SEO touch to becoming active as a sequence of states (touchpoints). Use historical journey data to estimate transition probabilities between states — what is the probability that a user who landed on a category page goes next to a product page vs. bounces?<br/><br/>Then, for each touchpoint, calculate the removal effect: if you delete all journeys containing this touchpoint and re-run the model, what % of conversions disappear? A touchpoint with a 35% removal effect is responsible for 35% of conversions. Sum removal effects across touchpoints, normalize to 100%, and you have attribution weights.<br/><br/>Why this over simpler multi-touch models? Linear says every touch is equal. Time-decay says recent touches matter more. These are arbitrary mathematical assumptions. Markov chain derives attribution from actual observed journey patterns — it is empirical, not assumed. For a company with massive journey data, the empirical approach is meaningfully more accurate.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">21% Q/Q sounds very high — is that really attributable to your work?</div>
-          <div class="qa-a">Honest answer: no, not entirely, and I would never claim it was. The 21% Q/Q growth had multiple drivers — product improvements, marketing spend, competitive dynamics, seasonality. What I can specifically attribute: the Markov chain attribution model revealed that discovery content was driving 40% of acquisition journeys but getting near-zero credit under last-touch. This caused a resource reallocation toward that content category in Q3. In markets where that reallocation happened, we measured incremental impression and click growth from the newly resourced pages — that specific increment was trackable to the attribution-driven investment decision. I'm comfortable saying my work was a meaningful contributor, and the methodology changes improved the team's ability to make better decisions.</div>
+          <div class="qa-q">Q: 21% Q/Q sounds very high — is that really attributable to your work?</div>
+          <div class="qa-a">Honest answer: no, not entirely, and I would never claim it was. The 21% Q/Q growth in active users was a market-level outcome with multiple drivers — product improvements, marketing spend, competitive dynamics, seasonality.<br/><br/>What I can specifically attribute: the Markov chain attribution model revealed that discovery content was driving 40% of acquisition journeys but getting near-zero credit under last-touch. This caused a resource reallocation toward that content category in Q3. In the markets where that reallocation happened, we measured incremental impression and click growth from the newly resourced pages — that specific increment was trackable to the attribution-driven investment decision.<br/><br/>I am comfortable saying my work was a meaningful contributor to the growth, and that the methodology changes I introduced improved the team's ability to make better decisions. Claiming full credit would be inaccurate and unconvincing to any interviewer who understands how multi-driver growth works.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How did you define 'active user' — this seems like it could be gamed?</div>
+          <div class="qa-a">You are right to push on this. Active user definitions that are too loose get gamed by vanity traffic — someone who lands on a page for 3 seconds and bounces is technically a 'user' but not meaningfully active.<br/><br/>The definition I worked with was a 28-day window with a minimum engagement event threshold — the specific events were product-defined and required demonstrated intent, not just presence. Market-specific calibration mattered — a mobile-first market defines engagement differently than a desktop market because session patterns differ.<br/><br/>We ran validity checks: did the active user metric actually correlate with downstream business outcomes (retention, revenue per user, product usage frequency)? Markets where it did not were flagged for definition review.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="g-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="google" placeholder="Your reflections..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-google" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- PROJECT 7: Gaming Platform Revenue Analytics -->
 <div id="ip-playstation" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 7 of 9</span>
     <h1 class="page-title">Gaming Platform Revenue Analytics</h1>
-    <p class="page-subtitle">Causal inference / PSM for Sony PlayStation. Oct 2021 – Jan 2022.</p>
-    <div class="stat-row"><div class="stat-pill">Client <span class="val">Sony PlayStation, IN</span></div><div class="stat-pill">Type <span class="val">Causal Inference · PSM</span></div></div>
+    <p class="page-subtitle">Causal Inference / Propensity Score Matching for Sony PlayStation, IN. Oct 2021 – Jan 2022.</p>
+    <div class="stat-row">
+      <div class="stat-pill">Client <span class="val">Sony PlayStation, IN</span></div>
+      <div class="stat-pill">Type <span class="val">Causal Inference / Propensity Score Matching</span></div>
+    </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">8%</span><div class="impact-label">Causal revenue uplift</div></div>
-      <div class="impact-item"><span class="impact-val">23%</span><div class="impact-label">Naive (biased) estimate</div></div>
-      <div class="impact-item"><span class="impact-val">15pp</span><div class="impact-label">Selection bias corrected</div></div>
-      <div class="impact-item"><span class="impact-val">2.8x</span><div class="impact-label">Rosenbaum bounds (sensitivity)</div></div>
+      <div class="impact-item"><span class="impact-val">8%</span><div class="impact-label">causal revenue uplift identified</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Strategy shift: high-playtime/low-spend targeting over high-spender acquisition</div></div>
+      
     </div>
   </div>
+
   <div class="project-card open">
     <div class="project-body">
       <div class="section-tab-bar">
@@ -523,56 +633,79 @@
         <div class="section-tab" data-pane="ps-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="ps-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="ps-pitch">
-        <div class="opening-line">"I used propensity score matching to measure the causal revenue impact of player engagement for PlayStation — and the most important finding was that the naive number was wrong. The obvious comparison showed 23% revenue difference between high and low engagement players. The causal estimate was 8%. The 15-point gap is selection bias, and betting a product strategy on the wrong number is an expensive mistake."</div>
-        <h4>Why the Naive Analysis Misleads</h4>
-        <p>High-engagement players also spend more — but that's correlation, not cause. Players who are intrinsically motivated to spend more on games also tend to play more. If you don't account for that, you'll overestimate the revenue impact of an engagement intervention.</p>
-        <h4>Propensity Score Matching</h4>
-        <p>I used pymatch to compute each player's propensity score — the probability of being a high-engagement player given observable characteristics: game genre preference, device type, geographic region, account age, historical average spend, and session frequency. Players with similar propensity scores got matched — one high-engagement (treatment), one medium-engagement (control). The revenue comparison within matched pairs isolates the engagement effect.</p>
-        <h4>The 2D Behavioral Matrix — The Strategic Finding</h4>
-        <p>Segmented players on two dimensions: playtime quartile and spending quartile. The highest revenue uplift potential was in the <strong>high-playtime/low-spend quadrant</strong> — engaged players who were not monetized. This completely shifted the product team's investment thesis: from 'acquire more high-spenders' to 'convert engaged non-spenders.'</p>
+        <p>Opening line:</p>
+<p>"I used propensity score matching to measure the causal revenue impact of player engagement for PlayStation — and the most important finding was that the naive number was wrong. The obvious comparison showed 23% revenue difference between high and low engagement players. The causal estimate was 8%. The 15-point gap is selection bias, and betting a product strategy on the wrong number is an expensive mistake."</p>
+<h4>WHY THE NAIVE ANALYSIS MISLEADS</h4>
+<p>High-engagement players also spend more — but that is correlation, not cause. Players who are intrinsically motivated to spend more on games also tend to play more. If you do not account for that, you will overestimate the revenue impact of an engagement intervention and underspend on interventions that convert genuinely high-engagement but low-spend players.</p>
+<h4>PROPENSITY SCORE MATCHING — THE METHOD</h4>
+<p>The goal was to create matched pairs of players that were identical on all observable characteristics except engagement level. I used pymatch to compute each player's propensity score — the probability of being a high-engagement player given observable characteristics: game genre preference, device type, geographic region, account age, historical average spend, and session frequency. Players with similar propensity scores got matched — one high-engagement (treatment), one medium-engagement (control). The revenue comparison within matched pairs isolates the engagement effect.</p>
+<h4>THE 2D BEHAVIORAL MATRIX — THE STRATEGIC FINDING</h4>
+<p>I segmented players on two dimensions: playtime quartile and spending quartile. This created 16 cells. The highest revenue uplift potential was in the high-playtime/low-spend quadrant — engaged players who were not monetized. This completely shifted the product team's investment thesis: from 'acquire more high-spenders' to 'convert engaged non-spenders.' The latter is a cheaper and higher-ROI intervention.</p>
+<h4>WHY 8% IS THE NUMBER TO USE</h4>
+<p>It is the causal estimate — what you would actually expect to see if you ran an engagement intervention on medium-engagement players. The 23% naive number is confounded. The 8% is the actionable number.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="ps-star">
         <table class="star-table">
-          <tr><td>Situation</td><td>PlayStation's revenue analytics was based on naive comparisons — overstating the revenue impact of engagement interventions by 15+ percentage points due to selection bias.</td></tr>
+          <tr><td>Situation</td><td>PlayStation's revenue analytics was based on naive comparisons between player segments — overstating the revenue impact of engagement interventions by 15+ percentage points due to selection bias.</td></tr>
           <tr><td>Task</td><td>Build a causal framework to measure the true revenue impact of engagement on player spending, controlling for pre-existing player characteristics that confound the naive comparison.</td></tr>
           <tr><td>Action</td><td>Applied propensity score matching (pymatch) to create comparable treatment/control groups on observable player characteristics. Built 2D behavioral matrix (playtime x spending quartiles). Measured revenue uplift within matched pairs.</td></tr>
           <tr><td>Result</td><td>8% causal revenue uplift identified vs. 23% naive estimate. High-playtime/low-spend quadrant identified as highest-ROI targeting opportunity. Product strategy shifted from high-spender acquisition to engaged-non-spender conversion.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="ps-qa">
         <div class="qa-item">
-          <div class="qa-q">Why PSM and not just running an A/B test?</div>
-          <div class="qa-a">A/B test would have been better — it's the gold standard for causal inference because randomization handles both observed and unobserved confounders. But this was retrospective analysis on existing player data. There was no experiment to run. PSM is the right tool for observational causal inference: match on observables to approximate the randomization you'd get from an experiment. Limitation: PSM only controls for <em>observed</em> confounders. If there are unobserved player characteristics — disposable income, gaming motivation type — that simultaneously affect engagement and spending, PSM doesn't remove that bias. We ran a Rosenbaum bounds sensitivity analysis — the finding would only be invalidated by an unobserved confounder creating a 2.8x difference in treatment odds. Given we controlled for genre, device, region, account age, session frequency, and historical spend, that's implausibly large.</div>
+          <div class="qa-q">Q: Why propensity score matching and not just running an A/B test?</div>
+          <div class="qa-a">A/B test would have been better — it is the gold standard for causal inference because randomization handles both observed and unobserved confounders. But this was retrospective analysis on existing player data. There was no experiment to run — we were answering 'what was the causal impact of engagement?' using observational data, not designing a future test.<br/><br/>PSM is the right tool for observational causal inference: match on observables to approximate the randomization you would get from an experiment. The limitation I would acknowledge: PSM only controls for observed confounders. If there are unobserved player characteristics — say, disposable income or gaming motivation type — that simultaneously affect engagement and spending, PSM does not remove that bias.<br/><br/>We ran a Rosenbaum bounds sensitivity analysis to understand how large an unobserved confounder would need to be to invalidate the 8% finding. It would need to have a 2.8x confounding effect — given that we controlled for genre, device, region, account age, session frequency, and historical spend, that is implausibly large. We reported 8% as a credible lower bound on the true causal effect.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">How did you validate the quality of your matching?</div>
-          <div class="qa-a">Standard covariate balance checks. Before matching, SMDs on key covariates were large: account age 0.42, historical spend 0.61, session frequency 0.55. After matching, all SMDs dropped below 0.1 — the accepted threshold. Sample coverage: matched sample retained 74% of the original treatment group (good generalizability). Falsification test: ran analysis on a variable that should have zero causal relationship with engagement — console purchase date. Model showed 0.3% — effectively zero.</div>
+          <div class="qa-q">Q: How did you validate the quality of your matching?</div>
+          <div class="qa-a">Standard covariate balance checks — non-negotiable in any PSM analysis. Before matching, standardized mean differences (SMDs) on key covariates were large: account age SMD 0.42, historical spend SMD 0.61, session frequency SMD 0.55. After matching, all SMDs dropped below 0.1 — the accepted threshold for good balance.<br/><br/>Two additional validation checks. First, sample coverage: the matched sample retained 74% of the original treatment group. If matching had been overly restrictive, we would have kept only 30-40% — a biased subsample of 'easy-to-match' players. 74% retention meant the results generalized reasonably to the broader high-engagement population.<br/><br/>Second, a falsification test: I ran the analysis on a variable that should have zero causal relationship with engagement — console purchase date. If PSM was working correctly, the matched comparison should show no revenue difference attributable to console purchase date. It showed 0.3% — effectively zero.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">What was the 2D behavioral matrix and what did it show?</div>
-          <div class="qa-a">Segmented all players simultaneously on two axes: playtime quartile (Q1=lowest 25% play hours, Q4=highest) and spending quartile. Creates a 4x4 grid of 16 cells. The strategically important cell was <strong>high playtime + low spend</strong> — players in Q3-Q4 playtime but Q1-Q2 spending. These are deeply engaged players who are not monetized. Before this analysis, PlayStation's instinct was to focus campaigns on players who already spend heavily. Converting an engaged-but-not-spending player is cheaper and higher ROI than acquiring a new high-spender from scratch — they're already in the habit loop, they just need the right offer. This single finding shifted the product team's targeting strategy entirely.</div>
+          <div class="qa-q">Q: What did the product team actually do with this analysis?</div>
+          <div class="qa-a">Three things.<br/><br/>First, they deprioritized a planned campaign targeting additional spend from already-high-engagement players — the 8% causal estimate suggested the ROI was lower than the 23% naive estimate had implied.<br/><br/>Second, they designed a specific in-game offer experiment for the high-playtime/low-spend quadrant — discounted DLC bundles for players with 50+ hours of playtime in the past 30 days but below median spend. This was a direct product of the 2D matrix analysis.<br/><br/>Third, they used the propensity score framework itself as a targeting tool. Players with propensity scores in the 0.4-0.6 range (genuinely on the engagement margin) became the priority targeting audience for engagement nudges — the players where a small intervention can move them from medium to high engagement, and where the causal effect is largest.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What was the 2D behavioral matrix and what did it show?</div>
+          <div class="qa-a">I segmented all players simultaneously on two axes: playtime quartile (Q1 = lowest 25% of play hours, Q4 = highest) and spending quartile (Q1 = lowest spend, Q4 = highest). This creates a 4x4 grid of 16 cells.<br/><br/>The strategically important cell was<br/><br/>high playtime + low spend<br/><br/>— players in Q3-Q4 playtime but Q1-Q2 spending. These are deeply engaged players who are not monetized. Before this analysis, PlayStation's instinct was to focus campaigns on players who already spend heavily. The matrix revealed a large segment of players who were highly hooked on the product but hadn't been given the right monetization trigger.<br/><br/>Converting an engaged-but-not-spending player is cheaper and higher ROI than acquiring a new high-spender from scratch — they're already in the habit loop, they just need the right offer. This single finding shifted the product team's targeting strategy entirely, from acquisition of high-spenders to conversion of engaged non-spenders.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="ps-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="playstation" placeholder="Your reflections..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-playstation" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- PROJECT 8: Cost Performance Management Tool -->
 <div id="ip-mars-cost" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 8 of 9</span>
     <h1 class="page-title">Cost Performance Management Tool</h1>
-    <p class="page-subtitle">Explainable AI + scenario simulation for MARS. Feb–Sep 2021.</p>
-    <div class="stat-row"><div class="stat-pill">Client <span class="val">MARS, IN</span></div><div class="stat-pill">Type <span class="val">Explainable AI · Scenario Sim</span></div></div>
+    <p class="page-subtitle">Explainable AI / Scenario Simulation (PyTorch + Integrated Gradients) for MARS, IN. Feb 2021 – Sep 2021.</p>
+    <div class="stat-row">
+      <div class="stat-pill">Client <span class="val">MARS, IN</span></div>
+      <div class="stat-pill">Type <span class="val">Explainable AI / Scenario Simulation (PyTorch + Integrated Gradients)</span></div>
+    </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">5–6%</span><div class="impact-label">Potential network cost savings</div></div>
-      <div class="impact-item"><span class="impact-val">PyTorch</span><div class="impact-label">+ Integrated Gradients</div></div>
-      <div class="impact-item"><span class="impact-val">3</span><div class="impact-label">Finance analysts self-serving in 6 weeks</div></div>
+      <div class="impact-item"><span class="impact-val">5-6%</span><div class="impact-label">potential network cost savings identified</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Scaled across multiple markets and product portfolios</div></div>
+      
     </div>
   </div>
+
   <div class="project-card open">
     <div class="project-body">
       <div class="section-tab-bar">
@@ -581,55 +714,78 @@
         <div class="section-tab" data-pane="mc-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="mc-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="mc-pitch">
-        <div class="opening-line">"I built MARS a tool that answered two questions they had never been able to answer together: what drove our costs up last quarter, and what would happen to costs if we changed our raw material sourcing strategy? The first required attribution — Integrated Gradients on a neural network. The second required simulation — a scenario tool built on top of the trained model."</div>
-        <h4>Why Costs Were Opaque</h4>
-        <p>MARS had quarterly cost reports showing costs went up by X%. But nobody could say why. Was it raw material prices? Volume mix shifts? Plant efficiency degradation? Finance teams produced narrative explanations, but they were largely post-hoc rationalisation.</p>
-        <h4>Why a Neural Network Over Tree Models</h4>
-        <p>Explainability via Integrated Gradients requires a differentiable model. Tree models are not differentiable — SHAP is the standard attribution method there, which is post-hoc and approximate. I chose PyTorch deliberately because I needed exact gradient-based attribution.</p>
-        <h4>Integrated Gradients — How to Explain It</h4>
-        <p>Imagine you want to understand why a cost went from ₹100 to ₹115. Integrated Gradients computes, for each input feature, how much of that ₹15 increase it's responsible for — by tracing the model's computation path from a baseline to the actual input. It satisfies the <strong>completeness axiom</strong>: attributions sum exactly to the total output change. So if raw materials drove ₹8, volume drove ₹4, and logistics drove ₹3 — those add up to exactly ₹15. No unexplained residual.</p>
-        <h4>The Scenario Simulation Layer</h4>
-        <p>Once the model was trained, I built a Streamlit simulation interface where business users could dial inputs — raw material price +10%, plant capacity -5%, volume mix shift — and see the predicted cost impact with full driver attribution. This moved the tool from diagnostic to prescriptive.</p>
+        <p>Opening line:</p>
+<p>"I built MARS a tool that answered two questions they had never been able to answer together: what drove our costs up last quarter, and what would happen to costs if we changed our raw material sourcing strategy? The first required attribution — Integrated Gradients on a neural network. The second required simulation — a scenario tool built on top of the trained model."</p>
+<h4>WHY COSTS WERE OPAQUE</h4>
+<p>MARS had quarterly cost reports that showed costs went up by X%. But nobody could confidently say why. Was it raw material price increases? Volume mix shifts? Plant efficiency degradation? Logistics rate changes? All four? Finance teams produced narrative explanations, but they were largely post-hoc rationalisation rather than data-derived attribution.</p>
+<h4>WHY A NEURAL NETWORK OVER TREE MODELS</h4>
+<p>Explainability via Integrated Gradients requires a differentiable model. Tree models are not differentiable — SHAP is the standard attribution method there, which is post-hoc and approximate. I chose PyTorch deliberately because I needed a model where I could compute exact gradient-based attribution from input to output.</p>
+<h4>INTEGRATED GRADIENTS — HOW TO EXPLAIN IT</h4>
+<p>Imagine you want to understand why a cost went from ₹100 to ₹115. Integrated Gradients computes, for each input feature, how much of that ₹15 increase it is responsible for — by tracing the model's computation path from a baseline (zero-cost reference point) to the actual input. It guarantees that attributions sum exactly to the total output change (completeness axiom). So if raw materials drove ₹8, volume drove ₹4, and logistics drove ₹3 — those numbers add up to exactly ₹15. No unexplained residual.</p>
+<h4>THE SCENARIO SIMULATION LAYER</h4>
+<p>Once the model was trained, I built a simulation interface where business users could dial inputs — raw material price +10%, plant capacity -5%, volume mix shift — and see the predicted cost impact with full driver attribution. This moved the tool from diagnostic to prescriptive. Built as a Streamlit application with sliders for 8 primary cost drivers, real-time model inference, and a waterfall chart output.</p>
+<h4>SCALE AND IMPACT</h4>
+<p>Deployed across multiple MARS markets and product portfolios. The 5-6% potential savings came from identifying cost levers that were previously invisible — specifically, a plant-level efficiency pattern that had been masked in aggregate reporting for 18 months.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="mc-star">
         <table class="star-table">
           <tr><td>Situation</td><td>MARS had no reliable way to attribute quarterly cost changes to specific drivers — finance narratives were post-hoc rationalisations. Strategic decisions were being made on assumed cost drivers.</td></tr>
-          <tr><td>Task</td><td>Build an attribution model that identifies cost drivers with mathematical precision, and a simulation tool that lets business users explore what-if scenarios.</td></tr>
+          <tr><td>Task</td><td>Build an attribution model that identifies cost drivers with mathematical precision, and a simulation tool that lets business users explore what-if scenarios on those same drivers.</td></tr>
           <tr><td>Action</td><td>Trained a PyTorch neural network on historical cost data. Applied Integrated Gradients for exact, completeness-satisfying cost driver attribution. Built Streamlit scenario simulation interface with real-time inference and waterfall chart output.</td></tr>
           <tr><td>Result</td><td>5-6% potential cost savings identified from previously invisible efficiency patterns. Scaled across multiple markets. Three finance analysts using simulation tool independently within 6 weeks of deployment.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="mc-qa">
         <div class="qa-item">
-          <div class="qa-q">Why Integrated Gradients over SHAP?</div>
-          <div class="qa-a">SHAP is more widely used, and for tree models (TreeSHAP), it's the right tool — fast, exact, well-validated. For neural networks, KernelSHAP applies, which is an <em>approximation</em> computed by sampling feature subsets. Integrated Gradients is exact for differentiable models. It satisfies the completeness axiom — attributions sum exactly to the model output — which KernelSHAP doesn't always guarantee. For a business context where someone is pointing at a number and saying 'raw materials caused ₹8 of our ₹15 cost increase,' mathematical exactness matters. You don't want the CFO asking why the attributions don't add up to the total.</div>
+          <div class="qa-q">Q: Why Integrated Gradients over SHAP — isn't SHAP more widely used?</div>
+          <div class="qa-a">SHAP is more widely used, and for tree models specifically (TreeSHAP), it is the right tool — fast, exact, and well-validated. For neural networks, however, KernelSHAP is the applicable variant, which is an approximation computed by sampling feature subsets and fitting a local linear model. It is approximate by design.<br/><br/>Integrated Gradients, by contrast, is exact for differentiable models. It satisfies the completeness axiom — attributions sum exactly to the model output — which KernelSHAP does not always guarantee. For a business context where someone is going to point at a number and say 'raw materials caused ₹8 of our ₹15 cost increase,' mathematical exactness matters. You do not want the CFO asking why the attributions do not add up to the total.<br/><br/>Second reason: IG gives you the attribution path — you can trace how the contribution accumulates as you move from the baseline to the actual input. 'Raw material prices moving from baseline to current levels contributed incrementally at each price step, with the largest contribution in the Q3 price spike' is a more useful story than a single SHAP value.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">How did you get business users to actually use the simulation?</div>
-          <div class="qa-a"><strong>Phase 1 — analyst-mediated:</strong> I ran scenario analyses for the finance team on specific questions they brought. Built familiarity with what the tool could answer.<br/><br/><strong>Phase 2 — self-service Streamlit:</strong> Training sessions with finance analysts (not data scientists). Key design decision: showing attribution alongside prediction. A prediction alone is a black box number. Showing 'your 10% raw material increase is driving 52% of the projected cost change, but plant efficiency is actually a 15% offset' gives the user a decision handle. Within 6 weeks, three finance analysts were running scenarios independently.</div>
+          <div class="qa-q">Q: How did you validate the neural network was learning cost structure and not fitting noise?</div>
+          <div class="qa-a">Three validation approaches.<br/><br/>Standard train/val/test split with held-out quarters — test performance (RMSE) within 8% of validation performance, so no significant overfitting.<br/><br/>DOMAIN VALIDITY: I ran the model on periods where the business team had high-confidence qualitative explanations — quarters where a specific raw material had a well-documented price spike. The model's attribution for that material in that quarter should spike correspondingly. It did in 7 of 8 such test quarters. The one miss was investigated and found to be legitimately complex — the logistics spike had occurred simultaneously with a volume shift, and the model was capturing an interaction effect.<br/><br/>PERMUTATION TEST: Shuffled the time indices on the cost target variable and retrained. A model learning noise would perform similarly on shuffled vs. real data. On shuffled data, performance degraded by 47% — confirming the model was learning genuine temporal cost structure, not spurious correlations.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How did you get business users to actually use the scenario simulation?</div>
+          <div class="qa-a">The adoption journey had two phases.<br/><br/>Phase one was analyst-mediated — I ran scenario analyses for the finance team on specific questions they brought. 'What is the cost impact if our edible oils contract renews at +12%?' I would run the simulation and deliver the output with attribution. This built familiarity with what the tool could answer.<br/><br/>Phase two was the Streamlit self-service interface. Training sessions with finance analysts — not data scientists. The key design decision was showing attribution alongside prediction. A prediction alone is a black box number. Showing 'your 10% raw material increase is driving 52% of the projected cost change, but plant efficiency is actually a 15% offset' gives the user a decision handle — where should I direct negotiations or operational improvement?<br/><br/>Within 6 weeks, three finance analysts were running scenarios independently without my involvement.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="mc-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="mars-cost" placeholder="Your reflections..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-mars-cost" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- PROJECT 9: Customer Service Levels -->
 <div id="ip-mars-csl" class="page">
   <div class="page-header">
     <span class="page-tag">Interview Prep · Project 9 of 9</span>
     <h1 class="page-title">Customer Service Levels</h1>
-    <p class="page-subtitle">12-week fulfillment risk classifier with MLOps for MARS. Apr 2020 – Jan 2021.</p>
-    <div class="stat-row"><div class="stat-pill">Client <span class="val">MARS, IN</span></div><div class="stat-pill">Type <span class="val">Classification · MLOps</span></div></div>
+    <p class="page-subtitle">Classification / MLOps (CatBoost + XGBoost ensemble) for MARS, IN. Apr 2020 – Jan 2021.</p>
+    <div class="stat-row">
+      <div class="stat-pill">Client <span class="val">MARS, IN</span></div>
+      <div class="stat-pill">Type <span class="val">Classification / MLOps (CatBoost + XGBoost ensemble)</span></div>
+    </div>
     <div class="impact-grid">
-      <div class="impact-item"><span class="impact-val">$12M</span><div class="impact-label">Revenue impact</div></div>
-      <div class="impact-item"><span class="impact-val">78% / 81.4%</span><div class="impact-label">CatBoost / XGBoost accuracy</div></div>
-      <div class="impact-item"><span class="impact-val">71%</span><div class="impact-label">Recall on failure class</div></div>
-      <div class="impact-item"><span class="impact-val">PSI &gt;0.2</span><div class="impact-label">Retraining trigger (caught drift)</div></div>
+      <div class="impact-item"><span class="impact-val">$12M</span><div class="impact-label">revenue increase</div></div>
+      <div class="impact-item"><span class="impact-val">78%</span><div class="impact-label">/ 81.4% model accuracy</div></div>
+      <div class="impact-item"><span class="impact-val"></span><div class="impact-label">Production deployment with drift monitoring</div></div>
+      
     </div>
   </div>
+
   <div class="project-card open">
     <div class="project-body">
       <div class="section-tab-bar">
@@ -638,41 +794,63 @@
         <div class="section-tab" data-pane="csl-qa">Hard Q&amp;A</div>
         <div class="section-tab" data-pane="csl-notes">My Notes</div>
       </div>
+
+      <!-- PITCH -->
       <div class="section-pane" id="csl-pitch">
-        <div class="opening-line">"I built a 12-week order fulfillment risk classifier for MARS — and the business impact came not from the model accuracy itself, but from getting it into production in a way that actually changed planner behavior. An 80% accurate model that stays in a Jupyter notebook is worthless. A 78% accurate model that is integrated into the production planning workflow and acted on daily is worth $12M."</div>
-        <h4>Problem Framing — Why Classification Over Regression</h4>
-        <p>The question planners needed answered was binary: is this order at risk or not? A regression predicting '73% fulfillment' doesn't map cleanly to a decision. A classification with a risk probability gives the planner a clear action threshold. The probability output let planners calibrate their own risk tolerance.</p>
-        <h4>Feature Engineering — Where the Signal Was</h4>
-        <p>The most predictive features were not the obvious ones. The strongest signals were: historical fulfillment rate for this customer-SKU combination in the same demand season, current plant capacity utilization vs. 8-week average, raw material availability as a % of required volume, and order placement lead time relative to the customer's contracted standard. Building the feature set required joining order management, production planning, procurement, and customer contract data — four systems.</p>
-        <h4>Why CatBoost + XGBoost Ensemble</h4>
-        <p>CatBoost handles high-cardinality categoricals natively without one-hot encoding. XGBoost was stronger on numerical features. The ensemble (weighted average, 60/40 XGBoost/CatBoost) outperformed either model individually by ~3 F1 points.</p>
-        <h4>Production Deployment and PSI Monitoring</h4>
-        <p>Weekly scoring pipeline — every Monday, all open customer orders for the next 12 weeks were scored. PSI monitoring tracked feature distribution drift monthly — retraining triggered when PSI exceeded 0.2 on any top-5 feature. This worked exactly as designed when a supplier disruption hit at month 7: PSI on raw material availability jumped from 0.08 to 0.34 in a single monthly check. We retrained. Planners never noticed a quality issue.</p>
+        <p>Opening line:</p>
+<p>"I built a 12-week order fulfillment risk classifier for MARS — and the business impact came not from the model accuracy itself, but from getting it into production in a way that actually changed planner behavior. An 80% accurate model that stays in a Jupyter notebook is worthless. A 78% accurate model that is integrated into the production planning workflow and acted on daily is worth $12M."</p>
+<h4>THE BUSINESS PROBLEM</h4>
+<p>MARS production planners had no forward visibility into which customer orders were at risk of partial fulfillment or delay. They found out when it happened — too late to reallocate production capacity. The 12-week horizon was critical: long enough to adjust production scheduling, short enough to have reliable signals.</p>
+<h4>PROBLEM FRAMING — WHY CLASSIFICATION OVER REGRESSION</h4>
+<p>The question planners needed answered was binary: is this order at risk or not? A regression predicting '73% fulfillment' does not map cleanly to a decision. A classification with a risk probability — 'this order has 67% probability of partial fulfillment' — gives the planner a clear action threshold. The probability output let planners calibrate their own risk tolerance.</p>
+<h4>FEATURE ENGINEERING — WHERE THE SIGNAL WAS</h4>
+<p>The most predictive features were not the obvious ones (order size, product category). The strongest signals were: historical fulfillment rate for this customer-SKU combination in the same demand season, current plant capacity utilization vs. 8-week average, raw material availability as a % of required volume, and order placement lead time relative to the customer's contracted standard. Building the feature set required joining order management, production planning, procurement, and customer contract data — four systems.</p>
+<h4>WHY CATBOOST + XGBOOST ENSEMBLE</h4>
+<p>CatBoost handles high-cardinality categoricals (customer ID, plant code, product category) natively without one-hot encoding. XGBoost was stronger on the numerical features. The ensemble (weighted average of probability scores, 60/40 XGBoost/CatBoost) outperformed either model individually by ~3 F1 points.</p>
+<h4>PRODUCTION DEPLOYMENT AND MONITORING</h4>
+<p>Weekly scoring pipeline — every Monday, all open customer orders for the next 12 weeks were scored. High-risk orders (above a threshold calibrated to planner capacity) were flagged in the production planning system. I built PSI monitoring to track feature distribution drift monthly — retraining triggered when PSI exceeded 0.2 on any top-5 feature.</p>
       </div>
+
+      <!-- STAR -->
       <div class="section-pane" id="csl-star">
         <table class="star-table">
           <tr><td>Situation</td><td>MARS production planners had no forward visibility into fulfillment risk — discovering shortfalls reactively, after production allocation was locked.</td></tr>
           <tr><td>Task</td><td>Build a 12-week forward-looking classification model scoring each customer order's fulfillment risk, integrated into the production planning workflow.</td></tr>
-          <tr><td>Action</td><td>Engineered features from 4 systems. Built CatBoost + XGBoost ensemble. Deployed as weekly scoring pipeline with PSI-based drift monitoring and planner override audit trail.</td></tr>
-          <tr><td>Result</td><td>78%/81.4% individual model accuracy; ensemble outperformed both. $12M revenue impact. PSI monitoring sustained model reliability through production lifecycle.</td></tr>
+          <tr><td>Action</td><td>Engineered features from 4 systems (order management, production, procurement, contracts). Built CatBoost + XGBoost ensemble on probability scores. Deployed as weekly scoring pipeline with PSI-based drift monitoring and planner override audit trail.</td></tr>
+          <tr><td>Result</td><td>78%/81.4% individual model accuracy; ensemble outperformed both. $12M revenue impact from improved planning and reduced fulfillment failures. PSI monitoring sustained model reliability through production lifecycle.</td></tr>
         </table>
       </div>
+
+      <!-- Q&A -->
       <div class="section-pane" id="csl-qa">
         <div class="qa-item">
-          <div class="qa-q">78% accuracy doesn't sound impressive — how did you justify this for production?</div>
-          <div class="qa-a">Accuracy is the wrong metric for imbalanced classification problems. Historical data had ~78% on-time fulfillment — a model that predicted 'always fulfilled' would hit 78% accuracy without any intelligence. That's the baseline. The metrics that mattered: precision and recall on the <em>failure</em> class, and cost-weighted F1. At our operating threshold, the model caught 71% of all fulfillment failures (recall) with 58% precision. Without the model, planners were catching perhaps 20-30% of failures through intuition. 71% recall was a genuine step-change in risk visibility.</div>
+          <div class="qa-q">Q: 78% accuracy does not sound impressive — how did you justify this for production?</div>
+          <div class="qa-a">Accuracy is the wrong metric for imbalanced classification problems, and this is worth addressing directly. Historical data had ~78% on-time fulfillment — a model that predicted 'always fulfilled' would hit 78% accuracy without any intelligence. That is the baseline.<br/><br/>The metrics that mattered: precision and recall on the failure class, and cost-weighted F1. We optimized the probability threshold for maximum recall at acceptable precision — we would rather have false alarms (planner reviews an order that turns out fine) than missed alarms (an at-risk order that no one acted on until it failed). The cost of a false alarm was ~2 hours of planner review. The cost of a missed alarm was an unfulfilled order — customer penalties, expediting costs, lost revenue.<br/><br/>At our operating threshold, the model caught 71% of all fulfillment failures (recall) with 58% precision. Without the model, planners were catching perhaps 20-30% of failures through intuition. 71% recall was a genuine step-change in risk visibility.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">Walk me through what actually happened with the PSI spike.</div>
-          <div class="qa-a">PSI measures how much a feature's distribution in production has shifted compared to training. Thresholds: below 0.1 = stable, 0.1–0.2 = slight drift worth watching, above 0.2 = significant drift and retraining trigger. For roughly seven months, raw material availability PSI was sitting at 0.08. Then a supplier disruption hit. In a single monthly PSI check, that feature jumped from 0.08 to 0.34 — nearly four times the retraining threshold. We retrained on a rolling 18-month window that included the disruption period. Performance was restored within three percentage points. The planners never noticed a quality issue because we caught and fixed it proactively. That's the entire point of monitoring — you catch it before the business is affected.</div>
+          <div class="qa-q">Q: How did you handle class imbalance?</div>
+          <div class="qa-a">Three approaches in combination.<br/><br/>First, SMOTE-ENN — generated synthetic failure cases by interpolating between existing failure cases in feature space, combined with edited nearest neighbors to remove noisy borderline cases. Plain SMOTE can generate unrealistic synthetic samples; ENN cleans those up.<br/><br/>Second, class weights — CatBoost has a native class_weights parameter; XGBoost has scale_pos_weight. I set both to reflect the inverse class frequency (~4:1 for fulfilled vs. failed orders), so the model treats each failure example as worth 4x a fulfilled example during training.<br/><br/>Third, threshold calibration — I used Platt scaling to calibrate probability outputs, then chose the threshold on the validation set that maximized the cost-weighted F1 score. Operating threshold ended up around 0.35 rather than 0.5 — reflecting the asymmetric cost structure.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-q">How did you handle class imbalance?</div>
-          <div class="qa-a"><strong>SMOTE-ENN:</strong> Generated synthetic failure cases by interpolating between existing failure cases in feature space, combined with edited nearest neighbors to remove noisy borderline cases.<br/><strong>Class weights:</strong> CatBoost native class_weights; XGBoost scale_pos_weight — both set to reflect inverse class frequency (~4:1).<br/><strong>Threshold calibration:</strong> Used Platt scaling to calibrate probability outputs, then chose the threshold on validation set that maximized cost-weighted F1. Operating threshold ended up around 0.35 rather than 0.5, reflecting the asymmetric cost structure.</div>
+          <div class="qa-q">Q: What happened to the model in production over time — did it decay?</div>
+          <div class="qa-a">It stayed stable for about 7 months, then drifted. The drift trigger was a supply chain disruption — raw material availability patterns changed significantly due to a supplier issue, which broke the feature distribution for one of the top-5 predictors. PSI on that feature jumped from 0.08 to 0.34 in a single monthly check — well above the 0.2 retraining threshold.<br/><br/>We retrained on a rolling 18-month window that included the disruption period. Post-retraining performance was restored within 3 percentage points of original on the new distribution. The important learning: the retraining trigger worked as designed — we caught the drift before it caused meaningful degradation. The planners did not notice a model quality issue because we caught and fixed it proactively.<br/><br/>If I were building this today, I would add online feature monitoring — real-time flagging when any production input falls outside training distribution bounds, not just monthly PSI checks. Monthly is fine for slow-moving drift; supply chain disruptions can cause fast-moving distribution shifts that a monthly check misses for 2-4 weeks.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How did you get planners to actually trust and use the model output?</div>
+          <div class="qa-a">Three things that worked.<br/><br/>TRANSPARENCY OVER ACCURACY THEATRE: I showed planners the model's error rates honestly upfront — including examples of cases where it was wrong. Planners who felt the model was being sold without acknowledgment of limitations were the most resistant. Planners who understood the failure modes were more willing to use it as a tool rather than expecting an oracle.<br/><br/>INTEGRATION NOT A SEPARATE DASHBOARD: The risk scores appeared inside the production planning system planners already used daily — not in a separate analytics tool they had to remember to check. Being embedded in the workflow meant the model was visible at the moment of decision.<br/><br/>OVERRIDE AUDIT TRAIL: Planners could override risk flags with a reason code. This gave them agency — they were not being overruled, they were being supported. The override data also fed a monthly calibration review: cases where planners consistently overrode the model on a specific pattern became candidates for model improvement.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Walk me through what actually happened with the PSI spike.</div>
+          <div class="qa-a">PSI — Population Stability Index — measures how much a feature's distribution in production has shifted compared to when the model was trained. The thresholds are: below 0.1 is stable, 0.1 to 0.2 is slight drift worth watching, above 0.2 is significant drift and a retraining trigger.<br/><br/>For roughly seven months in production, raw material availability — one of the top five predictive features — was sitting at a PSI of 0.08. Stable. The model was seeing the same kind of data it had been trained on.<br/><br/>Then a supplier disruption hit. The distribution of raw material availability in production looked nothing like what the model had learned. In a single monthly PSI check, that feature jumped from 0.08 to 0.34 — nearly four times the retraining threshold. We retrained the model on a rolling 18-month window that included the disruption period. Performance was restored within three percentage points of the original baseline.<br/><br/>The planners never noticed a quality issue because we caught and fixed it before degradation showed up in their outputs. That's the entire point of monitoring — you catch it proactively, not after the business has already been affected<br/><br/>.</div>
         </div>
       </div>
+
+      <!-- NOTES -->
       <div class="section-pane" id="csl-notes">
-        <div class="notes-area"><span class="notes-label">Personal notes</span><textarea data-key="mars-csl" placeholder="Your reflections..."></textarea></div>
+        <div class="notes-area">
+          <span class="notes-label">Personal notes — saves locally in your browser</span>
+          <textarea data-key="ip-mars-csl" placeholder="Add your own numbers, anecdotes, outcomes. Reflect after each interview: what worked, what stumped you, what you'd change in this story..."></textarea>
+        </div>
       </div>
     </div>
   </div>
@@ -686,37 +864,42 @@
     <p class="page-subtitle">Positioning strategy, strongest stories, recurring Q themes.</p>
   </div>
   <div class="meta-card">
-    <h3>Your Three Strongest Stories</h3>
+    <h3>YOUR THREE STRONGEST STORIES</h3>
     <ul>
-      <li><strong>Project 1 (Refund / Agentic AI)</strong> — Genuinely novel architecture. Most DS candidates have not built multi-agent systems in production. Lead with this for any AI-heavy role.</li>
-      <li><strong>Project 7 (PlayStation / PSM)</strong> — Causal reasoning is rare and highly valued. Proactively framing the naive number vs. the causal number is a signal of statistical maturity that very few candidates demonstrate.</li>
-      <li><strong>Project 9 (MARS / Customer Service)</strong> — The production deployment story (MLOps, drift monitoring, override audit trail, planner adoption) is what separates senior candidates from mid-level. Lead with this for any role emphasising production ML.</li>
+      <li>These are the projects where your narrative is most differentiated from typical DS candidates:</li>
+      <li><strong>PROJECT 1 (Refund / Agentic AI)</strong> — Genuinely novel architecture. Most DS candidates have not built multi-agent systems in production. Lead with this for any AI-heavy role.</li>
+      <li><strong>PROJECT 7 (PlayStation / PSM)</strong> — Causal reasoning is rare and highly valued. Proactively framing the naive number vs. the causal number is a signal of statistical maturity that very few candidates demonstrate.</li>
+      <li><strong>PROJECT 9 (MARS / Customer Service)</strong> — The production deployment story (MLOps, drift monitoring, override audit trail, planner adoption) is what separates senior candidates from mid-level. Lead with this for any role emphasising production ML.</li>
     </ul>
   </div>
   <div class="meta-card">
-    <h3>Where to Be Proactively Honest</h3>
+    <h3>WHERE TO BE PROACTIVELY HONEST</h3>
     <ul>
-      <li><strong>Project 2 (SKU Segmentation)</strong> — Acknowledge cluster instability is a genuinely hard unsolved problem. Pivot to what you'd do better: constrained clustering, hierarchical cut with business-driven tree depth.</li>
-      <li><strong>Project 3 (Metro Brands)</strong> — Acknowledge the long-tail SKU accuracy problem. You tried three things, none moved the needle significantly. Honest answer is analogical lifecycle forecasting — lead with that in a second phase.</li>
-      <li><strong>Project 5 (Schneider)</strong> — The 30% soft-constraint reclassification is a conservative estimate. Be upfront that 15% of records couldn't be linked across systems. This is a data quality issue you flagged, not an analysis flaw.</li>
+      <li>Interviewers who catch you after a weak answer trust you less. Get ahead of it:</li>
+      <li><strong>Project 2 (SKU Segmentation)</strong> — Acknowledge cluster instability is a genuinely hard unsolved problem. Then pivot to what you would do better: constrained clustering, hierarchical cut with business-driven tree depth.</li>
+      <li><strong>Project 3 (Metro Brands)</strong> — Acknowledge the long-tail SKU accuracy problem. You tried three things, none moved the needle significantly. The honest answer is analogical lifecycle forecasting — and you would lead with that in a second phase.</li>
+      <li><strong>Project 5 (Schneider)</strong> — The 30% soft-constraint reclassification is a conservative estimate. Be upfront that 15% of records could not be linked across systems. This is a data quality issue you flagged, not an analysis flaw.</li>
     </ul>
   </div>
   <div class="meta-card">
-    <h3>General Principles</h3>
+    <h3>COMMON QUESTION THEMES ACROSS ALL PROJECTS</h3>
     <ul>
-      <li>Lead with the business problem, not the technique. Every project answer should start with 'the problem was...' not 'I built a model that...'</li>
-      <li>Show limitations proactively. Interviewers respect 'here is the gap and here is what I would do differently' far more than 'everything worked perfectly.'</li>
-      <li>Anchor on one concrete number per story. One crisp metric lands harder than four approximate ones.</li>
-      <li>Separate what you did from what the team did. Use 'I' for your specific contributions and 'we' for team outcomes.</li>
-    </ul>
-  </div>
-  <div class="meta-card">
-    <h3>Common Question Themes (30-sec answers)</h3>
-    <ul>
-      <li><strong>'Why this model and not X?'</strong> — Always have the alternative. Explain why yours was appropriate, acknowledge where X would be better.</li>
-      <li><strong>'How did you measure success?'</strong> — Separate model-level metrics from business-level metrics. Know both. Know which was agreed upfront vs. which emerged.</li>
-      <li><strong>'What would you do differently?'</strong> — This is a gift. Never say 'nothing' — you always have at least one architectural improvement.</li>
+      <li>Almost every project will face some version of these questions. Have crisp 30-second answers:</li>
+      <li><strong>'Why this model / approach and not X?'</strong> — Always have the alternative. Explain why yours was appropriate, acknowledge where X would be better.</li>
+      <li><strong>'How did you measure success / impact?'</strong> — Separate model-level metrics from business-level metrics. Know both. Know which was agreed upfront vs. which emerged.</li>
+      <li><strong>'What would you do differently?'</strong> — This is a gift. It shows self-awareness and growth. Never say 'nothing' — you always have at least one architectural improvement.</li>
       <li><strong>'What was the hardest part?'</strong> — Always be specific. Not 'data quality was hard' but 'cross-system record linkage across three systems with no shared customer key required fuzzy matching and excluded 15% of records.'</li>
+    </ul>
+  </div>
+  <div class="meta-card">
+    <h3>EVOLVING THIS DOCUMENT</h3>
+    <ul>
+      <li>After every interview: add to the 'Your Personal Notes' section of each project. Track:</li>
+      <li>Which questions you were asked (compare to the Q&A here)</li>
+      <li>Questions you were NOT ready for — add them with your developed answer</li>
+      <li>Reactions from the interviewer — what landed, what got follow-up skepticism</li>
+      <li>Any new details you remember about the project that strengthen the story</li>
+      <li>Last updated: April 2026. This is a living document — update it after every interview.</li>
     </ul>
   </div>
   <div class="notes-area" style="margin-top: 0">
@@ -1139,6 +1322,260 @@ llmeval run --config eval_config.yaml --output results/</code></pre>
       <div class="section-pane" id="p5-career">
         <div class="meta-card"><h3>The 30-Second Interview Demo</h3><p>'Let me show you something. This is drift-watch — a monitoring system I built. I run this one command, it simulates 30 production batches. Watch the dashboard: batches 0–14, everything green. Batch 15 — red. PSI spikes from 0.08 to 0.34. That triggers a Slack alert. In my MARS project, that is exactly what happened when a supplier disruption hit. We caught it proactively.'</p></div>
         <div class="meta-card"><h3>Senior ML Engineer Signal</h3><p>Production deployment + monitoring = senior signal. Most junior/mid candidates build models. Senior engineers monitor them. Direct resume tie-in: 'Built drift-watch, an open-source PSI monitoring system — generalised from production MARS deployment where PSI-triggered retraining was used to catch supply chain disruption drift.'</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CORE ANALYTICS Q&A -->
+<div id="ip-core-qa" class="page">
+  <div class="page-header">
+    <span class="page-tag">Interview Prep · Core Knowledge</span>
+    <h1 class="page-title">Core Analytics &amp; Data Science Q&amp;A</h1>
+    <p class="page-subtitle">Foundational, must-know concepts for a 7-10 years experienced analytics professional.</p>
+  </div>
+
+  <div class="project-card open">
+    <div class="project-body">
+      <div class="section-tab-bar">
+        <div class="section-tab" data-pane="qa-stats">Statistics</div>
+        <div class="section-tab" data-pane="qa-ml">Machine Learning</div>
+        <div class="section-tab" data-pane="qa-eval">Evaluations</div>
+        <div class="section-tab" data-pane="qa-python">Python Data</div>
+        <div class="section-tab" data-pane="qa-prob">Probability</div>
+      </div>
+
+      <!-- STATISTICS -->
+      <div class="section-pane" id="qa-stats">
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the Central Limit Theorem (CLT) and why is it practically important in analytics?</div>
+          <div class="qa-a">CLT states that the distribution of sample means approaches a normal distribution as the sample size gets larger, regardless of the population's underlying distribution (assuming finite variance). Practically, it allows us to use normal-distribution-based tests (like t-tests or z-tests) to compare sample means (e.g., in A/B testing) even if the underlying data (like revenue per user or click-through rates) is highly skewed or non-normal.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you explain a p-value to a non-technical stakeholder, and what is its biggest misconception?</div>
+          <div class="qa-a">To a stakeholder: "Assuming our new feature actually has zero effect, the p-value is the probability that we would see a result this positive just by random luck." The biggest misconception is that the p-value is the probability that the null hypothesis is true. A p-value of 0.03 doesn't mean there's a 3% chance the result is a fluke; it means <em>if</em> the feature does nothing, we'd see this data 3% of the time.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the difference between a t-test and ANOVA, and when do you use each?</div>
+          <div class="qa-a">A t-test compares the means of exactly two groups (e.g., Control vs. Variant). ANOVA (Analysis of Variance) compares the means of three or more groups. You use ANOVA instead of multiple t-tests to control the Family-Wise Error Rate (Type I error). If you ran three separate t-tests for groups A, B, and C, your chance of a false positive inflates beyond your alpha (e.g. 0.05).</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What do R-squared and Adjusted R-squared measure, and why is Adjusted R-squared preferred in multiple regression?</div>
+          <div class="qa-a">R-squared measures the proportion of variance in the dependent variable explained by the independent variables. The problem with R-squared is that it monotonically increases as you add more variables, even if they are noise. Adjusted R-squared penalizes the addition of non-informative variables, only increasing if the new variable improves the model more than would be expected by chance. It prevents overfitting in linear models.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the difference between Type I and Type II errors, and how do you prioritize them?</div>
+          <div class="qa-a">Type I error is a False Positive (rejecting a true null hypothesis, e.g., concluding a feature works when it doesn't). Type II error is a False Negative (failing to reject a false null hypothesis, e.g., missing a real effect). Priority depends on the business context. For medical diagnosis or fraud detection, minimizing Type II is critical. For UX changes where development cost is high, minimizing Type I is preferred.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What are Degrees of Freedom in statistics?</div>
+          <div class="qa-a">Degrees of freedom (DF) represent the number of independent values or quantities that can vary in an analysis without breaking any constraints. In a simple variance calculation of a sample (N), DF is N-1 because once the sample mean is known, only N-1 values are free to vary. DF relates directly to the power of statistical tests and model complexity.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Explain Maximum Likelihood Estimation (MLE) and its relation to regression.</div>
+          <div class="qa-a">MLE is a method for estimating the parameters of a statistical model by maximizing the likelihood function, making the observed data most probable. In Ordinary Least Squares (OLS) linear regression, assuming normally distributed errors, minimizing the mean squared error (MSE) is mathematically equivalent to performing MLE to find the parameters.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is heteroscedasticity and why is it a problem in linear regression?</div>
+          <div class="qa-a">Heteroscedasticity occurs when the variance of the residuals is not constant across all levels of the independent variables (e.g., error grows as the predicted value grows). It violates a key assumption of OLS, meaning the standard errors are biased. This makes hypothesis tests (p-values, confidence intervals) unreliable, though the coefficient estimates themselves remain unbiased.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you detect and handle multicollinearity?</div>
+          <div class="qa-a">Multicollinearity happens when independent variables are highly correlated with each other. It inflates the variance of coefficient estimates, making them unstable and hard to interpret. It's detected using the Variance Inflation Factor (VIF). If VIF > 5-10, you can handle it by dropping correlated features, combining them, or using regularization (like Ridge/Lasso) which is robust to multicollinearity.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What factors affect the Statistical Power of a test?</div>
+          <div class="qa-a">Statistical power is the probability of correctly rejecting a false null hypothesis (1 - Type II error rate). It is affected by four main factors: Sample size (larger = more power), Effect size (larger = more power), Significance level / Alpha (higher alpha = more power), and Variance (lower variance = more power).</div>
+        </div>
+      </div>
+
+      <!-- MACHINE LEARNING -->
+      <div class="section-pane" id="qa-ml">
+        <div class="qa-item">
+          <div class="qa-q">Q: How do Gradient Boosting and Random Forest differ fundamentally?</div>
+          <div class="qa-a">Both are ensemble methods using decision trees, but they combine them differently. Random Forest builds independent trees in parallel using bagging (bootstrap aggregating) and random feature selection, reducing variance. Gradient Boosting builds trees sequentially, where each new tree tries to correct the residual errors of the previous ensemble, reducing bias.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What are the key differences between XGBoost and CatBoost, and when would you choose one over the other?</div>
+          <div class="qa-a">XGBoost is a highly optimized gradient boosting framework using pre-sorting and histogram-based splits. CatBoost (Categorical Boosting) is specifically designed to handle categorical variables natively using target-based statistics (ordered target encoding) without requiring one-hot encoding. For a dataset with many high-cardinality categoricals, CatBoost is generally faster to develop and often more robust. XGBoost might be preferred for purely numerical data or when extreme hyperparameter tuning is required.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Why do we need Cross Validation, and when does standard K-Fold fail?</div>
+          <div class="qa-a">Cross-validation provides a robust estimate of out-of-sample model performance by training and evaluating on multiple distinct splits of the data. Standard K-fold randomly assigns rows to folds. It fails in time-series data (because you cannot train on the future to predict the past—requires TimeSeriesSplit), or when there are grouped dependencies (e.g., multiple rows for the same customer—requires GroupKFold to prevent data leakage).</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you detect and address overfitting vs underfitting in a model building lifecycle?</div>
+          <div class="qa-a">Underfitting (high bias) means the model is too simple; both train and validation scores are poor. Address it by increasing tree depth, adding features, or decreasing learning rate while increasing the number of trees. Overfitting (high variance) means the train score is great but the validation score drops. Address it by decreasing max depth, increasing L1/L2 regularization, increasing minimum child weight, or lowering the learning rate and using early stopping.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Explain the Bias-Variance Tradeoff and how it maps to hyperparameter tuning.</div>
+          <div class="qa-a">Bias is error from erroneous assumptions (underfitting), while variance is error from sensitivity to small fluctuations in training data (overfitting). As you increase model complexity (e.g., deeper trees, lower regularization), bias decreases and variance increases. Tuning hyperparameters is the process of finding the 'sweet spot' that minimizes total error on unseen data.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the difference between L1 (Lasso) and L2 (Ridge) Regularization? Why does L1 cause sparsity?</div>
+          <div class="qa-a">Both add a penalty term to the loss function to prevent overfitting. L2 adds squared magnitude of coefficients, shrinking them evenly but rarely to exactly zero. L1 adds the absolute magnitude. Because the derivative of the L1 penalty is constant, it pushes coefficients all the way to zero, effectively performing feature selection and creating sparse models.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What strategies do you use for handling severely imbalanced data?</div>
+          <div class="qa-a">Techniques include: 1) Changing the evaluation metric to PR-AUC or F1. 2) Using class weights to penalize errors on the minority class more heavily. 3) Resampling (SMOTE to synthesize minority cases, or downsampling the majority class). Generally, algorithms with class weights (like XGBoost's scale_pos_weight) are preferred over synthetic resampling, which can distort the feature space.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: When does K-Means fail and when would you use DBSCAN instead?</div>
+          <div class="qa-a">K-Means assumes clusters are spherical and similarly sized, and it struggles with outliers because it minimizes variance. It fails on complex, non-linear cluster shapes (like concentric circles). DBSCAN groups based on density. It doesn't require specifying 'K', handles noise/outliers naturally, and can find arbitrarily shaped clusters, making it vastly superior for spatial data.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How does PCA (Principal Component Analysis) work and what are its limitations?</div>
+          <div class="qa-a">PCA is a dimensionality reduction technique that transforms data into orthogonal components that capture the maximum variance. It works via eigenvalue decomposition of the covariance matrix. Limitations: It assumes linear relationships between features, scaling is strictly required, and the resulting principal components lack interpretability compared to original business features.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How are feature importances calculated in tree models, and what are the flaws?</div>
+          <div class="qa-a">By default, tree models use Gini impurity decrease (or variance reduction) across all splits using a feature. The major flaw is that Gini importance is heavily biased towards high-cardinality continuous features. Permutation importance (shuffling a feature and measuring the drop in performance) or SHAP values are much more reliable, model-agnostic methods.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Explain the "Curse of Dimensionality."</div>
+          <div class="qa-a">As the number of features (dimensions) increases, the volume of the feature space increases exponentially, making the data sparse. This causes distance-based metrics (like Euclidean distance in KNN or K-Means) to lose meaning, because the distance between any two points becomes roughly similar, degrading algorithmic performance.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What are SHAP values and how do they explain predictions?</div>
+          <div class="qa-a">SHAP (SHapley Additive exPlanations) uses game theory to assign each feature an importance value for a specific prediction. Unlike global feature importance, SHAP explains *local* predictions (e.g., exactly why Customer A was denied a loan) by showing how each feature pushes the model output from the base expected value to the final prediction.</div>
+        </div>
+      </div>
+
+      <!-- EVALUATIONS -->
+      <div class="section-pane" id="qa-eval">
+        <div class="qa-item">
+          <div class="qa-q">Q: Explain the components of a Confusion Matrix and how they translate to business costs.</div>
+          <div class="qa-a">It breaks down predictions into True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). In an analytics context, these map directly to business costs. For example, in fraud detection, an FP is declining a good customer (costing LTV and trust), while an FN is letting a fraudulent transaction through (costing the transaction value).</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you decide whether to optimize for Precision or Recall?</div>
+          <div class="qa-a">Precision is TP / (TP + FP) — "Of all the cases I flagged, how many were actually true?" Recall is TP / (TP + FN) — "Of all the actual true cases, how many did I find?" You optimize for Precision when the cost of a False Positive is very high (e.g., spam filter, recommending a drastic medical treatment). You optimize for Recall when the cost of a False Negative is high (e.g., cancer screening, high-risk fraud detection).</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: When is F1 Score a better metric than Accuracy?</div>
+          <div class="qa-a">Accuracy fails on imbalanced datasets. If only 1% of transactions are fraud, a model that predicts "No Fraud" 100% of the time has 99% accuracy but is completely useless. F1 Score is the harmonic mean of Precision and Recall. It is a much better metric when you have class imbalance and care about the positive class, because it requires both Precision and Recall to be reasonable to get a high score.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: When should you use the Precision-Recall (PR) AUC instead of ROC AUC?</div>
+          <div class="qa-a">ROC AUC plots True Positive Rate vs False Positive Rate across all thresholds. PR AUC plots Precision vs Recall. ROC AUC can be overly optimistic when dealing with highly imbalanced datasets, because a large number of True Negatives keeps the FPR low even if you have many False Positives. If the positive class is rare and you care mostly about finding it without drowning in false alarms, PR AUC is a much more informative metric.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Why use Log Loss (Cross-Entropy Loss) instead of accuracy for evaluating probabilities?</div>
+          <div class="qa-a">Accuracy evaluates hard class assignments, ignoring confidence. A model predicting 0.51 and one predicting 0.99 for a positive class both get the same accuracy if the threshold is 0.5. Log loss penalizes the model based on the distance between the predicted probability and the true label, severely punishing confident wrong answers. It forces the model to be well-calibrated.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How are ROC AUC and the Gini Coefficient related?</div>
+          <div class="qa-a">In binary classification, the Gini coefficient (commonly used in credit scoring) is a linear transformation of the ROC AUC. The formula is: Gini = 2 * AUC - 1. An AUC of 0.75 means a Gini of 0.50. Both measure the model's ability to rank order predictions correctly regardless of threshold.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: When do you use MAPE vs RMSE for regression evaluation?</div>
+          <div class="qa-a">RMSE (Root Mean Squared Error) heavily penalizes large errors because of the square, and it is in the absolute units of the target. MAPE (Mean Absolute Percentage Error) evaluates error relative to the actual value, providing a percentage that's easy for business stakeholders to understand. However, MAPE fails when actual values are zero or close to zero.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you evaluate the quality of unsupervised clustering?</div>
+          <div class="qa-a">Without ground truth labels, we use intrinsic metrics like the Silhouette Score. It measures how similar an object is to its own cluster (cohesion) compared to other clusters (separation). Values range from -1 to 1; a high value indicates the object is well matched to its own cluster and poorly matched to neighboring clusters.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: When is a simple Holdout set preferred over K-Fold Cross-Validation?</div>
+          <div class="qa-a">K-Fold is computationally expensive. If you are dealing with massive datasets (e.g., millions of rows) and deep learning models that take days to train, a single large holdout (train/val/test split) is preferred because the variance of the performance estimate is already low due to the large sample size.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is a Calibration Curve and why is model calibration important?</div>
+          <div class="qa-a">A calibration curve plots predicted probabilities against actual observed frequencies. Calibration is vital for business decisions. If a model predicts a 20% risk of default, the business needs exactly 20 out of 100 such people to default to calculate expected values correctly. Tree models (like Random Forest) push probabilities away from 0 and 1, often requiring Platt Scaling or Isotonic Regression to recalibrate.</div>
+        </div>
+      </div>
+
+      <!-- PYTHON DATA -->
+      <div class="section-pane" id="qa-python">
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you perform multiple aggregations on different columns simultaneously in pandas using groupby?</div>
+          <div class="qa-a">You pass a dictionary to the <code>.agg()</code> function. For example: <code>df.groupby('customer_id').agg({'purchase_amt': ['sum', 'mean'], 'order_id': 'count'})</code>. This allows you to define exactly which operations happen on which columns without running multiple groupby statements.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Why and when do you use reset_index() after a groupby?</div>
+          <div class="qa-a">When you use <code>groupby()</code>, the grouping columns become the index of the resulting DataFrame. Using <code>reset_index()</code> moves those index levels back into standard columns. This is critical when you want to merge the aggregated data back with another dataset or use those columns as features in a machine learning model, as most libraries expect standard columns, not indices.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the difference between melt() and pivot(), and when do you use melt?</div>
+          <div class="qa-a"><code>melt()</code> is used to unpivot a DataFrame from wide format to long format, whereas <code>pivot()</code> does the reverse. You use <code>melt</code> when your dataset has values spread across multiple columns (e.g., Jan_Sales, Feb_Sales, Mar_Sales) and you need them in a normalized long format (e.g., columns Month and Sales) which is required for seaborn plotting or grouped modeling.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How are diff() and pct_change() used in data transformation?</div>
+          <div class="qa-a"><code>.diff()</code> calculates the absolute difference between the current row and a previous row (usually periods=1). <code>.pct_change()</code> calculates the percentage difference. These are essential for making time-series data stationary (removing trends) before feeding them into models, or for generating velocity features (e.g., "change in spend from last month") for behavioral models.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Why is vectorization faster than .apply() or loops in pandas?</div>
+          <div class="qa-a">Loops in Python are slow due to interpretation overhead and type-checking at every iteration. Vectorized operations in pandas delegate the loop to highly optimized C-level code and take advantage of SIMD (Single Instruction, Multiple Data) processor instructions, performing the operation on entire arrays simultaneously, resulting in orders of magnitude speedups.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Explain the differences between merge, join, and concat in pandas.</div>
+          <div class="qa-a"><code>concat</code> stacks DataFrames either vertically (rows) or horizontally (columns), aligning purely on the index. <code>merge</code> is equivalent to a SQL JOIN, allowing complex combinations based on specific columns (keys) rather than the index. <code>join</code> is a convenience method built on top of merge that explicitly joins two DataFrames on their indices.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What are advanced strategies for handling missing data beyond mean/median imputation?</div>
+          <div class="qa-a">For time-series, forward-fill (<code>ffill</code>) or interpolation (linear/spline) maintains sequential logic. For cross-sectional data, iterative imputation (like MICE) models each feature as a function of the others. Another strategy is to add an "is_missing" boolean indicator column and fill the missing numeric with an extreme value (like -999) so tree models can explicitly learn the pattern of "missingness".</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What are lambda functions and when are they useful in pandas?</div>
+          <div class="qa-a">Lambda functions are anonymous, inline functions (e.g., <code>lambda x: x*2</code>). In pandas, they are heavily used inside <code>.apply()</code>, <code>.assign()</code>, or aggregation pipelines for custom, quick transformations without needing to define a formal <code>def</code> function block, keeping data wrangling code concise and chained.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you use Rolling Windows in time-series feature engineering?</div>
+          <div class="qa-a">The <code>.rolling(window=N)</code> method creates a moving window over the data. By applying aggregations like <code>.mean()</code>, <code>.std()</code>, or <code>.max()</code>, you can engineer features like "7-day average spend" or "30-day volatility", which are highly predictive in forecasting and behavioral models because they capture momentum and recent context.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you perform Window/Analytic functions (like SQL Rank) in pandas?</div>
+          <div class="qa-a">You combine <code>groupby()</code> with transformation methods. For instance, to rank customers by spend within each country: <code>df.groupby('country')['spend'].rank(method='dense', ascending=False)</code>. To get running totals: <code>df.groupby('customer')['spend'].cumsum()</code>. To get the previous row's value: <code>.shift(1)</code>.</div>
+        </div>
+      </div>
+
+      <!-- PROBABILITY -->
+      <div class="section-pane" id="qa-prob">
+        <div class="qa-item">
+          <div class="qa-q">Q: How does Bayes' Theorem apply to real-world business problems?</div>
+          <div class="qa-a">Bayes' Theorem updates our belief in a hypothesis based on new evidence. In business, it explains the "Base Rate Fallacy." For instance, if a rare disease (1 in 10,000) has a test that is 99% accurate, a positive test still means the person likely does <em>not</em> have the disease, because the base rate is so low. In analytics, this means even a highly accurate model predicting a rare event (like clicking an ad) will yield mostly false positives.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How do you use Expected Value for decision making?</div>
+          <div class="qa-a">Expected value is the probability-weighted sum of all possible outcomes. EV = Σ (Probability * Value). It's the foundation of decision theory. If an ML model predicts a 10% chance of conversion on a $100 item, the EV of a marketing touch is $10. If the marketing touch costs $15, you shouldn't do it, even if the model's accuracy is perfect.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the difference between Independent and Mutually Exclusive events?</div>
+          <div class="qa-a">Mutually exclusive events cannot happen at the same time (e.g., a customer cannot churn and renew on the same day). P(A and B) = 0. Independent events mean the outcome of one does not affect the outcome of the other (e.g., Customer A churning does not affect Customer B churning). P(A and B) = P(A) * P(B). Confusing these is a common error in risk modeling.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Why is the Law of Large Numbers crucial for analytics?</div>
+          <div class="qa-a">It states that as the number of trials increases, the sample mean will converge to the expected value. This is why small sample sizes in A/B testing are dangerous—early results are highly volatile and prone to extreme values. You must wait for the sample size to be sufficiently large for the metric to stabilize to its true population parameter.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: When do you use the Poisson Distribution?</div>
+          <div class="qa-a">The Poisson distribution models the number of events occurring in a fixed interval of time or space, given a known constant mean rate of occurrence (lambda), and assuming events are independent. It is widely used for modeling queuing systems, like the number of customer support calls per hour, or the number of website clicks per minute.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the difference between Binomial and Hypergeometric distributions?</div>
+          <div class="qa-a">Both model the number of successes in a set of trials. The Binomial assumes sampling *with* replacement, meaning the probability of success remains constant across trials (independent). The Hypergeometric models sampling *without* replacement from a finite population, meaning each draw changes the probability for the next draw (dependent).</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Explain Markov Chains and the "memoryless property."</div>
+          <div class="qa-a">A Markov Chain is a stochastic model describing a sequence of possible events. The defining "memoryless property" (Markov property) states that the probability of transitioning to the next state depends *only* on the current state, not on the sequence of events that preceded it. This is used in attribution modeling (e.g., Markov Chain attribution) to evaluate customer journey touchpoints.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: Provide a business example of Simpson's Paradox.</div>
+          <div class="qa-a">Simpson's Paradox occurs when a trend appears in different groups of data but disappears or reverses when the groups are combined. Example: An A/B test shows Variant B increases conversion rates overall. But when analyzing Mobile and Desktop users separately, Variant A is better for *both*. This happens due to confounding variables (e.g., Variant B accidentally got way more Desktop traffic, which inherently converts higher).</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: How is Survival Analysis (like Kaplan-Meier) used for customer churn?</div>
+          <div class="qa-a">Standard classification predicts *if* a customer will churn. Survival analysis predicts *when* they will churn (time-to-event). The Kaplan-Meier estimator calculates the probability of surviving past a certain time point. This handles "censored" data (customers who haven't churned yet) correctly, allowing businesses to calculate Customer Lifetime Value (LTV) curves dynamically.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Q: What is the difference between Combinatorics and Permutations?</div>
+          <div class="qa-a">Combinations count the number of ways to choose items from a set where the order *does not* matter (e.g., picking a committee of 3 people from 10). Permutations count the number of ways to arrange items where the order *does* matter (e.g., picking a President, VP, and Secretary from 10 people). In business, combinations are used for A/B multivariate test scoping.</div>
+        </div>
+      </div>
+
+      <!-- NOTES -->
+      <div class="notes-area">
+        <textarea data-key="ip-core-qa"></textarea>
       </div>
     </div>
   </div>
