@@ -39,6 +39,60 @@ To enable it:
 Will log entries work on GitHub Pages? **Partially.**
 GitHub Pages only hosts static files, so the Node.js backend (`server.js`) will not run there. If you access your site via GitHub Pages, the logging system will gracefully fall back to using your browser's `localStorage`. You can still add, view, and edit logs in the browser, but **they will not be saved back to the repository**. To persist logs to the repo for your agents to use, you must run it locally.
 
+Your site will be live at: `https://BhurkeSiddhesh.github.io/career-hub/`
+
+(Takes ~2 minutes to deploy the first time)
+
+### 3. Update your links
+
+In `index.html`, search for `siddheshbhurke` and update:
+- GitHub link in the sidebar footer
+- LinkedIn link in the sidebar footer
+
+---
+
+## How to Update Content
+
+All content lives in `index.html`. It's structured so each section is clearly delimited.
+
+### Adding a new interview Q&A
+
+Find the relevant project's `<div class="section-pane" id="[project]-qa">` block and add:
+
+```html
+<div class="qa-item">
+  <div class="qa-q">Your new question here</div>
+  <div class="qa-a">Your answer here. Use <strong>bold</strong> for emphasis.</div>
+</div>
+```
+
+### Updating impact numbers
+
+Find the `<div class="impact-grid">` block for the project and update the `impact-val` spans.
+
+### Adding a new project
+
+1. Add a nav item in the sidebar:
+```html
+<a class="nav-item" data-page="ip-newproject"><span class="dot"></span>New Project Name</a>
+```
+
+2. Add a page block (copy an existing `<div id="ip-[name]" class="page">` block and modify)
+
+### Personal notes
+
+Each project has a **My Notes** tab with a textarea that saves automatically to `localStorage` in your browser. Notes persist between sessions on the same device/browser.
+
+---
+
+## Keeping It Private (Optional)
+
+If you want this private:
+- Make the repo **private** (GitHub Pages works for private repos on paid plans)
+- Or add a simple `htpasswd` via Cloudflare Access / Netlify
+
+---
+
 ## File Structure
 
 ```text
