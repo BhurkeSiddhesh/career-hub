@@ -2,21 +2,87 @@
   "ip-jewel": [
     {
       "date": "2026-05-06T10:55:25.572Z",
-      "content": "elaborate about this -  A high-value customer ordering a known problem SKU in an unusual pattern is a different risk profile than either signal alone. I created 25+ KPIs across these three layers.\n\n---------\n\nOur priority was to defend cases where reps were rejecting and our agent was accepting refund request and vice versa, thats where we had a leverage"
+      "content": "elaborate about this -  A high-value customer ordering a known problem SKU in an unusual pattern is a different risk profile than either signal alone. I created 25+ KPIs across these three layers.\n\n---------\n\nOur priority was to defend cases where reps were rejecting and our agent was accepting refund request and vice versa, thats where we had a leverage",
+      "incorporated": true
     },
     {
       "date": "2026-05-06T11:00:26.471Z",
-      "content": "Questions asked by interviewer?\n\nwhy 03 and why not somehing else?\n\n\nexplain this in detail - The rep validated or overrode. Override rate started at ~40% in week one and dropped to under 15% by week six."
+      "content": "Questions asked by interviewer?\n\nwhy 03 and why not somehing else?\n\n\nexplain this in detail - The rep validated or overrode. Override rate started at ~40% in week one and dropped to under 15% by week six.",
+      "incorporated": true
     },
     {
       "date": "2026-05-06T11:34:05.541Z",
-      "content": "can you explain with a scenario where reps were rejecting and our agent was accepting the refund request, and vice versa? and why agent was doing better? Take 2-3 scenarios"
+      "content": "can you explain with a scenario where reps were rejecting and our agent was accepting the refund request, and vice versa? and why agent was doing better? Take 2-3 scenarios",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-07T16:25:44.892Z",
+      "content": "Are there any other eval method that are used in agentic ai?\n\nwhy dint you use them?\n\n-----------------\n\nPERCENTILE CALIBRATION DRIFT: Percentiles computed on a static historical window go stale. A 90th percentile spender in January is a different dollar amount in December due to holiday volume. I built rolling 90-day windows, refreshed weekly.\n\nI had rather taken 6 months of rolling window and not 90 days",
+      "incorporated": true
     }
   ],
   "ip-brenntag": [
     {
       "date": "2026-05-06T11:22:51.854Z",
-      "content": "Why did you not build basic heuristic based segmentation instead of modelling?"
+      "content": "Why did you not build basic heuristic based segmentation instead of modelling?",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-07T16:50:39.442Z",
+      "content": "can you elaborate this part further more, to understand better?\n\nMY SOLUTION — ROLLING 12-MONTH BEHAVIORAL PROFILES\n\n\n--------\nhelp us understand silhouette scores in detail? what do they mean? can we reply on them for business decisions?",
+      "incorporated": true
+    }
+  ],
+  "ip-core-qa": [
+    {
+      "date": "2026-05-07T19:32:15.586Z",
+      "content": "add more context to this Q - Q: How do you explain a p-value to a non-technical stakeholder, and what is its biggest misconception? explain with an example",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-07T19:35:09.400Z",
+      "content": "what is bootstrap aggregating",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-07T19:36:34.989Z",
+      "content": "explain this in details - XGBoost is a highly optimized gradient boosting framework using pre-sorting and histogram-based splits.\n\nYou can also add images where necessary for me to understand the concepts better.",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-07T19:37:44.484Z",
+      "content": "explain this with image and example - Q: Explain the Bias-Variance Tradeoff and how it maps to hyperparameter tuning.",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-07T19:38:50.080Z",
+      "content": "which is better shap value or integrated gradients? why?\nis there anything better than them?",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-07T19:39:27.093Z",
+      "content": "explain confusion matrix, formulas, precision, recall . f1",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-10T14:29:04.786Z",
+      "content": "elaborate this with an example - \n\nCLT states that the distribution of sample means approaches a normal distribution as the sample size gets larger, regardless of the population's underlying distribution (assuming finite variance). Practically, it allows us to use normal-distribution-based tests (like t-tests or z-tests) to compare sample means (e.g., in A/B testing) even if the underlying data (like revenue per user or click-through rates) is highly skewed or non-normal.",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-10T14:54:38.661Z",
+      "content": "for this Q: How do you explain a p-value to a non-technical stakeholder, and what is its biggest misconception?\n\ncan you define a null and alt hypothesis , take on example where you accept null and other where you reject? with calculations",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-10T14:56:08.048Z",
+      "content": "explain all statistics question with an example and it calculation and not just words",
+      "incorporated": true
+    },
+    {
+      "date": "2026-05-10T15:03:20.128Z",
+      "content": "explain eaxh jargons, just throw at them",
+      "incorporated": true
     }
   ]
 }

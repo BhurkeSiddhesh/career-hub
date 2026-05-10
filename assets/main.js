@@ -14,9 +14,12 @@ function showPage(id, navEl) {
   document.getElementById('sidebar').classList.remove('open');
 }
 
-// Wire up nav items
-document.querySelectorAll('.nav-item[data-page]').forEach(item => {
-  item.addEventListener('click', () => showPage(item.dataset.page, item));
+// Wire up nav items and cards
+document.querySelectorAll('[data-page]').forEach(item => {
+  item.addEventListener('click', () => {
+    const isNavItem = item.classList.contains('nav-item');
+    showPage(item.dataset.page, isNavItem ? item : null);
+  });
 });
 
 // ─── Accordion (project cards) ──────────────────────────────────────────────
@@ -61,6 +64,7 @@ document.querySelectorAll('.page').forEach(page => {
   const ta = notesArea.querySelector('textarea');
   if (!ta) return;
   const key = ta.dataset.key;
+  page.classList.add("split-layout");
 
   // Group existing content
   const pageContent = document.createElement('div');

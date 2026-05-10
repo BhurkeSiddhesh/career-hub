@@ -17,6 +17,7 @@
 - Using AI agents to automatically rewrite and improve project pitches in `index.html` based on `project_logs.json`.
 
 ## Change Log
+- **2026-05-10**: Executed `project-evolver.md` workflow. Synchronized `index.html` with raw insights from `project_logs.json` for Jewel-Osco, Brenntag, and Core Q&A sections. Marked logs as incorporated. Verified UI elements and fixed a layout bug affecting pages without logs; added 'split-layout' class to conditionally apply flex styles. (Gemini CLI)
 - **2026-05-06**: Initialized Global Agent Constitution artifacts (`AGENTS.md`, `task.md`, `JULES_LOG.json`, `.agent/skills/`).
 - **2026-05-06**: Created `server.js` and updated `main.js` to persist logs to the file system. Added `.github/workflows/deploy.yml` for CI.
 
