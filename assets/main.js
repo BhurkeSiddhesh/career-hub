@@ -21,7 +21,18 @@ document.querySelectorAll('[data-page]').forEach(item => {
     showPage(item.dataset.page, isNavItem ? item : null);
     if (item.dataset.pane) {
       const targetPage = document.getElementById(item.dataset.page);
-      targetPage?.querySelector(`.section-tab[data-pane="${item.dataset.pane}"]`)?.click();
+      const paneId = item.dataset.pane;
+      // Directly activate the target pane without relying on a hidden tab click
+      if (targetPage) {
+        targetPage.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
+        targetPage.querySelector(`#${paneId}`)?.classList.add('active');
+        // Keep tab active state in sync (for any visible tab-bars)
+        const bar = targetPage.querySelector('.section-tab-bar');
+        if (bar) {
+          bar.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
+          bar.querySelector(`.section-tab[data-pane="${paneId}"]`)?.classList.add('active');
+        }
+      }
     }
   });
 });

@@ -1373,28 +1373,9 @@ llmeval run --config eval_config.yaml --output results/</code></pre>
     <p class="page-subtitle">40+ detailed, senior-level responses covering Statistics, ML, Evaluations, and Python Data.</p>
   </div>
 
-  <!-- MASTERY FRAMEWORK -->
-  <div class="meta-card" style="margin: 0 40px 32px 40px; background: rgba(200,136,42,0.05); border: 1px solid var(--accent); border-left: 5px solid var(--accent);">
-    <h3 style="margin-top: 0; color: var(--accent2);">🧠 The Mastery Framework</h3>
-    <p style="font-size: 14px; line-height: 1.6;">Senior-level technical readiness is defined by the transition from <strong>Statements</strong> to <strong>Detailed Examples</strong>. This hub uses the 🎯 Mastery pattern to bridge abstract theory and high-stakes engineering reality.</p>
-    
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px;">
-      <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px;">
-        <strong style="color: #ff6b6b; display: block; margin-bottom: 8px;">❌ The Statement (Junior/Mid)</strong>
-        <p style="font-size: 13px; margin: 0; color: var(--text-dim);">"I handle imbalanced datasets by using SMOTE or adjusting class weights to improve the F1 score."</p>
-        <span style="font-size: 11px; font-style: italic; color: #ff6b6b;">Lacks context, business impact, and specific constraints.</span>
-      </div>
-      <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid var(--accent);">
-        <strong style="color: var(--accent2); display: block; margin-bottom: 8px;">✅ The Detailed Example (Senior/Lead)</strong>
-        <p style="font-size: 13px; margin: 0;">"In the <strong>Jewel-Osco Refund</strong> project, we faced a 1:1000 fraud imbalance. Instead of simple oversampling, I implemented <strong>Cost-Sensitive Learning</strong>. We mapped the cost of a False Negative (missed fraud) as $200 vs. a False Positive (wrongful rejection) at $5. By optimizing the decision threshold to $0.12$ instead of $0.5$, we reduced manual override rates from 40% to 15%."</p>
-        <span style="font-size: 11px; font-style: italic; color: var(--accent2);">Anchors theory in cost-benefit analysis and specific KPIs.</span>
-      </div>
-    </div>
-  </div>
-
   <div class="project-card open">
     <div class="project-body">
-      <div class="section-tab-bar">
+      <div class="section-tab-bar" style="display:none">
         <div class="section-tab" data-pane="qa-stats">Statistics</div>
         <div class="section-tab" data-pane="qa-ml">Machine Learning</div>
         <div class="section-tab" data-pane="qa-eval">Evaluations</div>
@@ -2705,7 +2686,6 @@ llmeval run --config eval_config.yaml --output results/</code></pre>
         </div>
 
           <p style="font-size: 13px;"><strong>Project Tie-in (Brenntag SKU):</strong> We used the **Silhouette Score** to mathematically defend our choice of 'K' for our product segmentation. Marketing wanted $K=12$ segments. We ran the algorithm and showed that at $K=5$, the score peaked at 0.62. But at $K=12$, the score dropped into negative territory, mathematically proving that generating 12 segments was just arbitrarily cutting up a single cohesive customer group, which would lead to identical marketing campaigns overlapping each other.</p>
-        </div>
         <div class="qa-item">
           <div class="qa-q">Q: When is a simple Holdout set preferred over K-Fold Cross-Validation?</div>
           <div class="qa-a">K-Fold is computationally expensive. If you are dealing with massive datasets (e.g., millions of rows) and deep learning models that take days to train, a single large holdout (train/val/test split) is preferred because the variance of the performance estimate is already low due to the large sample size.</div>
