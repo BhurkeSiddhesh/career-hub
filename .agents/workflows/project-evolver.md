@@ -31,6 +31,18 @@ Send the following prompt to the agent in your chat:
    - **Constraint**: Preserve the exact HTML structure, CSS classes, and `div` boundaries.
 5. **Mark Processed**: Once the HTML is updated, modify `project_logs.json` and add `"incorporated": true` to every log entry you just processed.
 
+### Phase 1.5: Full-Site Mastery Audit
+**Perform this step regardless of whether any logs were unprocessed.**
+
+1. **Scan All Q&A Sections**: Read every `<div class="meta-card mastery-breakdown">` block across all 9 interview prep projects and the Core Analytics Q&A section in `index.html`.
+2. **Identify Thin Content**: Flag any mastery breakdown that:
+   - Is missing one or more of the 5 required steps (Breaking Down / Comprehensive Version / Core Math / Scenarios A & B / Project Tie-in)
+   - Contains a step that is just a one-liner or summary statement with no depth
+   - Lacks LaTeX for any mathematical formula or statistical notation
+3. **Expand & Deepen**: Apply the Maniac Teacher Standard to every flagged block — add the missing steps, expand thin sections with project-specific logic, and retrofit LaTeX where absent. Do not delete existing content; layer on top.
+4. **Scan Portfolio Roadmap**: Review all 5 Portfolio Roadmap project blocks. Check that each has a substantive description of the technical approach. If any are placeholder-thin, expand them using the project's domain context.
+5. **Scan Interview Pitch & Impact Tabs**: For each of the 9 interview projects, verify the Pitch (STAR format completeness) and Impact grid (concrete metrics). Flag and expand any section that is vague or missing quantified outcomes.
+
 ### Phase 2: Custom Ad-Hoc Updates
 1. **Analyze Chat Input**: Review the user's prompt that triggered this workflow.
 2. **Apply Custom Edits**: Execute any explicit ad-hoc requests (e.g., UI tweaks, roadmap updates, theme changes).
