@@ -22,7 +22,7 @@ Send the following prompt to the agent in your chat:
 ### Phase 1: Log Assimilation & Technical Refinement
 1. **Read Logs**: Open and read `project_logs.json`.
 2. **Filter Unprocessed**: Identify all log entries that do *not* have the `"incorporated": true` flag. 
-   - *If all logs are already marked as incorporated, skip to Phase 2.*
+   - *If all logs are already marked as incorporated, skip to Phase 1.5 — do NOT skip to Phase 2. The full-site audit must always run.*
 3. **Cross-Reference**: For every unprocessed log, locate the corresponding project block in `index.html`.
 4. **Evolve Pitch & Technical Deep-Dive**: Intelligently weave raw insights into the project's 'Pitch', 'Impact', and 'Q&A' sections. 
    - **Mastery Pattern (Ultra-Detailed Format)**: When writing a `<div class="meta-card mastery-breakdown">` block for Q&A, you MUST strictly format it with: 1. **Breaking Down the Original Answer & Identifying Gaps** (What works / The Gap), 2. **The Comprehensive, Gap-Filled Version** (Stakeholder Explanation / Biggest Misconception), 3. **Defining Core Math/Hypotheses**, 4. **Scenarios (A & B)** (with explicit Math and Conclusion), and 5. **Project Tie-in**. Never output a thin summary.
@@ -49,9 +49,15 @@ Send the following prompt to the agent in your chat:
    - *If no additional instructions were provided, skip this step.*
 
 ### Phase 3: Finalization & Strategic Audit
-1. **Quality Check**: Verify `index.html` syntax is intact and **MathJax** rendering is stable.
+1. **Quality Check**: Verify the following in `index.html`:
+   - No unclosed `<div>` tags or broken HTML structure
+   - All `<div class="meta-card mastery-breakdown">` blocks contain all 5 required steps
+   - No raw math expressions exist outside of LaTeX delimiters (`$...$` or `$$...$$`)
+   - MathJax CDN script tag is present and untouched
+   - All tab panels (`pitch`, `impact`, `qa`, `logs`) are correctly scoped within their project containers — no content bleeding across projects
 2. **Ledger Update**: Append a bullet point to the Change Log in `AGENTS.md` summarizing this evolution cycle.
 3. **User Summary**: End your turn by outputting a concise Markdown summary detailing:
    - Which specific projects were updated from logs.
+   - Which sections were expanded during the Phase 1.5 full-site audit (list project name + what was thin).
    - Specific examples of new **Mastery Cards** or **LaTeX** integration added.
    - Which custom updates were successfully applied.
