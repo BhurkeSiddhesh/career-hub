@@ -19,6 +19,10 @@ document.querySelectorAll('[data-page]').forEach(item => {
   item.addEventListener('click', () => {
     const isNavItem = item.classList.contains('nav-item');
     showPage(item.dataset.page, isNavItem ? item : null);
+    if (item.dataset.pane) {
+      const targetPage = document.getElementById(item.dataset.page);
+      targetPage?.querySelector(`.section-tab[data-pane="${item.dataset.pane}"]`)?.click();
+    }
   });
 });
 
